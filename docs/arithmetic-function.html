@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Arithmetic Functions </title>
+    <style>
+        
+        body {
+            font-size: large;
+        }
+        
+        
+        .datatype {
+            color: blue;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .function {
+            color: green;
+            font-weight: bold;
+        }
+        
+        .param {
+            color: grey;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h3>This is the list of available arithmetic functions.</h3>
+    <ul>
+        <br><li>
+            <div id="func:add">
+                <span class="datatype"> int32 </span> <span class="function"> add </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>   
+                <span class="datatype"> int64 </span> <span class="function"> add </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> float32 </span> <span class="function"> add </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> float64 </span> <span class="function"> add </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> string </span> <span class="function"> add </span> (<span class="datatype"> string </span> <span class="param">  value1</span>, <span class="datatype"> string </span> <span class="param">  value2</span>)
+                <p>
+                    Returns sum of <span class="param">  value1</span> and <span class="param">  value2</span> . Return type is same as data type of <span class="param">  value1</span> and <span class="param">  value2</span>.
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:subtract">
+                <div id="func:sub">
+                    <span class="datatype"> int32 </span> <span class="function"> subtract </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                    <span class="datatype"> int64 </span> <span class="function"> subtract </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                    <span class="datatype"> float32 </span> <span class="function"> subtract </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                    <span class="datatype"> float64 </span> <span class="function"> subtract </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> )
+
+                    <p>
+                        Returns difference of <span class="param">  value1</span> and <span class="param">  value2</span>. Return type is same as data type of <span class="param">  value1</span> and <span class="param">  value2</span>.
+                        <span class="function">sub</span> is a shorthand for this function.
+                    </p>
+                </div>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:multiply">
+                <div id="func:mul">
+                    <span class="datatype"> int32 </span> <span class="function"> multiply </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                    <span class="datatype"> int64 </span> <span class="function"> multiply </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                    <span class="datatype"> float32 </span> <span class="function"> multiply </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                    <span class="datatype"> float64 </span> <span class="function"> multiply </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> )
+                    <p>
+                        Multiplies <span class="param">  value1</span> and <span class="param">  value2</span> and returns the result. Return type is same as data type of <span class="param">  value1</span>
+                        and <span class="param">  value2</span>.
+                        <span class="function">mul</span> is a shorthand for this function.
+                    </p>
+                </div>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:divide">
+                <div id="func:div">
+                    <span class="datatype"> float32 </span> <span class="function"> divide </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                    <span class="datatype"> float64 </span> <span class="function"> divide </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                    <span class="datatype"> float32 </span> <span class="function"> divide </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                    <span class="datatype"> float64 </span> <span class="function"> divide </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> )
+                    <p>
+                        Divides <span class="param">  value1</span> by <span class="param">  value2</span> and returns the result. Return type is <span class="datatype"> float32 </span> in case of <span class="datatype"> int32 </span> and
+                        <span class="datatype"> float32 </span>, but <span class="datatype"> float64 </span> in case <span class="datatype"> int64 </span> and <span class="datatype"> float64 </span>.
+                        <span class="function">div</span> is a shorthand for this function.
+                    </p>
+                </div>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:intDiv">
+                <span class="datatype"> int32 </span> <span class="function"> intDiv </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> int64 </span> <span class="function"> intDiv </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> )
+                <p>
+                    Return integer division result of <span class="param">  value1</span> by <span class="param">  value2</span>. Return type is same as data type of <span class="param">  value1</span> and
+                    <span class="param">  value2</span>.
+                    For example intDiv(7,4) = 1, intDiv(8,4) = 2
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:mod">
+                <span class="datatype"> int32 </span> <span class="function"> mod </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> int64 </span> <span class="function"> mod </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> float32 </span> <span class="function"> mod </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> float64 </span> <span class="function"> mod </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> )
+                <p>
+                    Return mod of <span class="param">  value1</span> and <span class="param">  value2</span>. Return type is same as data type of <span class="param">  value1</span> and
+                    <span class="param">  value2</span>.
+                    For example mod(11,2) = 1
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:sqrt">
+                <span class="datatype"> float32 </span> <span class="function"> sqrt </span>( <span class="datatype"> int32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float64 </span> <span class="function"> sqrt </span>( <span class="datatype"> int64 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float32 </span> <span class="function"> sqrt </span>( <span class="datatype"> float32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float64 </span> <span class="function"> sqrt </span>( <span class="datatype"> float64 </span> <span class="param">  value</span>)
+                <p>
+                    Returns square root of <span class="param">  value</span>. Return type is <span class="datatype"> float32 </span> in case of <span class="datatype"> int32 </span> and <span class="datatype"> float32 </span>, but <span class="datatype"> float64 </span> in
+                    case <span class="datatype"> int64 </span> and <span class="datatype"> float64 </span>.
+                </p>
+            </div>
+        </li><br>
+
+        <br><li>
+            <div id="func:pow">
+                <span class="datatype"> int32 </span> <span class="function"> pow </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> int64 </span> <span class="function"> pow </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> float32 </span> <span class="function"> pow </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> float64 </span> <span class="function"> pow </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> )
+                <p>
+                    Returns <span class="param">  value1</span> to the <span class="param">  value2</span> power. Return type is same as data type of <span class="param">  value1</span> and <span class="param">  value2</span>.
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:abs">
+                <span class="datatype"> int32 </span> <span class="function"> abs </span>( <span class="datatype"> int32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> int64 </span> <span class="function"> abs </span>( <span class="datatype"> int64 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float32 </span> <span class="function"> abs </span>( <span class="datatype"> float32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float64 </span> <span class="function"> abs </span>( <span class="datatype"> float64 </span> <span class="param">  value</span>)
+                <p>
+                    Returns absolute <span class="param">  value</span> of <span class="param">  value</span>. Return type is same as data type of <span class="param">  value</span>.
+                    For example abs(10) = 10, abs(-10) = 10
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:floor">
+                <span class="datatype"> float32 </span> <span class="function"> floor </span>( <span class="datatype"> float32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float64 </span> <span class="function"> floor </span>( <span class="datatype"> float64 </span> <span class="param">  value</span>)
+                <p>
+                    Returns largest integer &lt;= <span class="param">  value</span>. Return type is same as data type of <span class="param">  value</span>.
+                    For example floor(10.1) = 10, floor(10.9) = 10, floor(10) = 10
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:ceil">
+                <span class="datatype"> float32 </span> <span class="function"> ceil </span>( <span class="datatype"> float32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float64 </span> <span class="function"> ceil </span>( <span class="datatype"> float64 </span> <span class="param">  value</span>)
+                <p>
+                    Returns smallest integer &gt;= <span class="param">  value</span>. Return type is same as data type of <span class="param">  value</span>.
+                    For example ceil(10.1) = 11, ceil(10.9) = 11, ceil(10) = 10
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:isInRange">
+                <span class="datatype"> boolean </span> <span class="function"> isInRange </span>( <span class="datatype"> int32 </span> <span class="param">  value</span>, <span class="datatype"> int32 </span> <span class="param">  start </span>, <span class="datatype"> int32 </span> <span class="param">  end </span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isInRange </span>( <span class="datatype"> int64 </span> <span class="param">  value</span>, <span class="datatype"> int64 </span> <span class="param">  start </span>, <span class="datatype"> int64 </span> <span class="param">  end </span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isInRange </span>( <span class="datatype"> float32 </span> <span class="param">  value</span>, <span class="datatype"> float32 </span> <span class="param">  start </span>, <span class="datatype"> float32 </span> <span class="param">  end </span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isInRange </span>( <span class="datatype"> float64 </span> <span class="param">  value</span>, <span class="datatype"> float64 </span> <span class="param">  start </span>, <span class="datatype"> float64 </span> <span class="param">  end </span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isInRange </span>( <span class="datatype"> string </span> <span class="param">  value</span>, <span class="datatype"> string </span> <span class="param">  start </span>, <span class="datatype"> string </span> <span class="param">  end </span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isInRange </span>( <span class="datatype"> date </span> <span class="param">  value</span>, <span class="datatype"> date </span> <span class="param">  start </span>, <span class="datatype"> date </span> <span class="param">  end </span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isInRange </span>( <span class="datatype"> date_time </span> <span class="param">  value</span>, <span class="datatype"> date_time </span> <span class="param">  start </span>, <span class="datatype"> date_time </span> <span class="param">  end </span>)
+                <p>
+                    Finds if <span class="param">  value</span> lies in inclusive range [<span class="param">  start </span>,<span class="param">  end </span>], that means if <span class="param">  start </span> &lt;= <span class="param">  value</span>
+                    &lt;= <span class="param">  end </span>.
+                    Returns True if it is in range, False otherwise.
+                </p>
+            </div>
+        </li><br>
+    </ul>
+    
+
+	<a href="index.html"> Home Page </a>
+</body>
+
+</html>

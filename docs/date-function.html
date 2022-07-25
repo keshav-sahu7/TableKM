@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Date functions</title>
+	<style>
+        
+        body {
+            font-size: large;
+        }
+        
+        .datatype {
+            color: blue;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .function {
+            color: green;
+            font-weight: bold;
+        }
+        
+        .param {
+            color: grey;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+
+<body>
+	<h3>
+		This is a list of available date and date_time functions.
+	</h3>
+	<ul>
+		<br><li>
+			<div id="func:day">
+				<span class="datatype"> int32 </span> <span class="function"> day</span>(<span class="datatype"> date </span> <span class="param">  value</span>) <br>  
+				<span class="datatype"> int32 </span> <span class="function"> day</span>(<span class="datatype"> date_time </span> <span class="param">  value</span>)
+				<p>
+					Returns day part of the <span class="param">  value</span>.
+				</p>
+			</div>
+		</li><br>
+
+		<br><li>
+			<div id="func:month">
+				<span class="datatype"> int32 </span> <span class="function"> month</span>(<span class="datatype"> date </span> <span class="param">  value</span>) <br>  
+				<span class="datatype"> int32 </span> <span class="function"> month</span>(<span class="datatype"> date_time </span> <span class="param">  value</span>)
+				<p>
+					Returns month part of the <span class="param">  value</span>.
+				</p>
+			</div>
+		</li><br>
+
+		<br><li>
+			<div id="func:year">
+				<span class="datatype"> int32 </span> <span class="function"> year</span>(<span class="datatype"> date </span> <span class="param">  value</span>) <br>  
+				<span class="datatype"> int32 </span> <span class="function"> year</span>(<span class="datatype"> date_time </span> <span class="param">  value</span>) 
+				<p>
+					Returns year part of the <span class="param">  value</span>.
+				</p>
+			</div>
+		</li><br>
+
+		<br><li>
+			<div id="func:hour">
+				<span class="datatype"> int32 </span> <span class="function"> hour</span>(<span class="datatype"> date_time </span> <span class="param">  value</span>)
+				<p>
+					Returns hour part of the <span class="datatype"> date_time </span> <span class="param">  value</span>.
+				</p>
+			</div>
+		</li><br>
+
+		<br><li>
+			<div id="func:minute">
+				<span class="datatype"> int32 </span> <span class="function"> minute</span>(<span class="datatype"> date_time </span> <span class="param">  value</span>)
+				<p>
+					Returns minute part of the <span class="datatype"> date_time </span> <span class="param">  value</span>.
+				</p>
+			</div>
+		</li><br>
+
+		<br><li>
+			<div id="func:second">
+				<span class="datatype"> int32 </span> <span class="function"> second</span>(<span class="datatype"> date_time </span> <span class="param">  value</span>)
+				<p>
+					Returns second part of the <span class="datatype"> date_time </span> <span class="param">  value</span>.
+				</p>
+			</div>
+		</li><br>
+
+		<br><li>
+			<div id="func:isLeapYear">
+				<span class="datatype"> boolean </span> <span class="function"> isLeapYear</span>(<span class="datatype"> int32 </span> <span class="param"> year</span>) 
+				<p>
+                                        Returns whether <span class="param"> year </span> is leap year or not.
+				</p>
+			</div>
+		</li><br>
+	</ul>
+	<a href="index.html"> Home Page </a>
+</body>
+
+</html>

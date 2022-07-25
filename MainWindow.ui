@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>770</width>
+    <height>587</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TableKM</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/icon/icons/table.png</normaloff>:/icon/icons/table.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="tab_widget">
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menu_bar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>770</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_view">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="a_run_query"/>
+   </widget>
+   <widget class="QMenu" name="menu_ubout_us">
+    <property name="title">
+     <string>About Us</string>
+    </property>
+    <addaction name="a_help"/>
+    <addaction name="a_welcome"/>
+    <addaction name="a_about_us"/>
+    <addaction name="a_about_qt"/>
+   </widget>
+   <widget class="QMenu" name="menu_file">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="a_new_table"/>
+    <addaction name="a_open"/>
+    <addaction name="a_exit"/>
+   </widget>
+   <addaction name="menu_file"/>
+   <addaction name="menu_view"/>
+   <addaction name="menu_ubout_us"/>
+  </widget>
+  <action name="a_new_table">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/table.png</normaloff>:/icons/table.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Table</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="a_open">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/open.png</normaloff>:/icons/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="a_exit">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/delete.png</normaloff>:/icons/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="a_run_query">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/filter.png</normaloff>:/icons/filter.png</iconset>
+   </property>
+   <property name="text">
+    <string>Run Query</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="a_help">
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="a_welcome">
+   <property name="text">
+    <string>Welcome Page</string>
+   </property>
+  </action>
+  <action name="a_about_us">
+   <property name="text">
+    <string>About Us</string>
+   </property>
+  </action>
+  <action name="a_about_qt">
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

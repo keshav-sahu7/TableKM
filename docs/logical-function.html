@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Logical functions</title>
+	<style>
+        
+        body {
+            font-size: large;
+        }
+        
+        .datatype {
+            color: blue;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .function {
+            color: green;
+            font-weight: bold;
+        }
+        
+        .param {
+            color: grey;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+
+<body>
+	<h3> This is a list of available logical functions. </h3>
+	<ul>
+		<br><li>
+			<div id="func:NOT">
+				<span class="datatype"> boolean </span> <span class="function">  NOT</span>(<span class="datatype"> boolean </span> <span class="param">  value</span>)
+				<p>
+					Returns opposite of <span class="param">  value</span>. If <span class="param">  value</span> is True then False is returned, if <span class="param">  value</span> is False then True is
+					returned.
+				</p>
+			</div>
+		</li><br>
+
+		<br><li>
+			<div id="func:AND">
+				<span class="datatype"> boolean </span> <span class="function">  AND</span>(<span class="datatype"> boolean </span> <span class="param">  value1</span>, <span class="datatype"> boolean </span> <span class="param">  value2</span>)
+				<p>
+					Returns True if both <span class="param">  value1</span> and <span class="param">  value2</span> are True, False otherwise.
+				</p>
+			</div>
+		</li><br>
+
+		<br><li>
+			<div id="func:OR">
+				<span class="datatype"> boolean </span> <span class="function">  OR</span>(<span class="datatype"> boolean </span> <span class="param">  value1</span>, <span class="datatype"> boolean </span> <span class="param">  value2</span>)
+				<p>
+					Returns True if at least one of <span class="param">  value1</span> and <span class="param">  value2</span> is True, False otherwise.
+				</p>
+			</div>
+		</li><br>
+
+		<br><li>
+			<div id="func:IF">
+				<span class="datatype"> int32 </span> <span class="function"> IF</span>(<span class="datatype"> boolean </span> <span class="param"> condition</span>, <span class="datatype"> int32 </span> <span class="param">  value1</span>, <span class="datatype"> int32 </span> <span class="param">  value2</span>) <br>  
+				<span class="datatype"> int64 </span> <span class="function"> IF</span>(<span class="datatype"> boolean </span> <span class="param"> condition</span>, <span class="datatype"> int64 </span> <span class="param">  value1</span>, <span class="datatype"> int64 </span> <span class="param">  value2</span>) <br>  
+				<span class="datatype"> float32 </span> <span class="function"> IF</span>(<span class="datatype"> boolean </span> <span class="param"> condition</span>, <span class="datatype"> float32 </span> <span class="param">  value1</span>, <span class="datatype"> float32 </span> <span class="param">  value2</span>) <br>  
+				<span class="datatype"> float64 </span> <span class="function"> IF</span>(<span class="datatype"> boolean </span> <span class="param"> condition</span>, <span class="datatype"> float64 </span> <span class="param">  value1</span>, <span class="datatype"> float64 </span> <span class="param">  value2</span>) <br>  
+				<span class="datatype"> string </span> <span class="function"> IF</span>(<span class="datatype"> boolean </span> <span class="param"> condition</span>, <span class="datatype"> string </span> <span class="param">  value1</span>, <span class="datatype"> string </span> <span class="param">  value2</span>) <br>  
+				<span class="datatype"> boolean </span> <span class="function"> IF</span>(<span class="datatype"> boolean </span> <span class="param"> condition</span>, <span class="datatype"> boolean </span> <span class="param">  value1</span>, <span class="datatype"> boolean </span> <span class="param">  value2</span>) <br>  
+				<span class="datatype"> date </span> <span class="function"> IF</span>(<span class="datatype"> boolean </span> <span class="param"> condition</span>, <span class="datatype"> date </span> <span class="param">  value1</span>, <span class="datatype"> date </span> <span class="param">  value2</span>) <br>  
+				<span class="datatype"> date_time </span> <span class="function"> IF</span>(<span class="datatype"> boolean </span> <span class="param"> condition</span>, <span class="datatype"> date_time </span> <span class="param">  value1</span>, <span class="datatype"> date_time </span> <span class="param">  value2</span>)
+				<p>
+					Returns <span class="param">  value1</span> if <span class="param"> condition</span> is True, <span class="param">  value2</span> otherwise. Type of both values must be same. It is a
+					typical if statement.
+				</p>
+			</div>
+		</li><br>
+
+	</ul>
+
+	<a href="index.html"> Home Page </a>
+</body>
+
+</html>

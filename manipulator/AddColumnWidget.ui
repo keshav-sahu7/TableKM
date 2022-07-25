@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddColumnWidget</class>
+ <widget class="QWidget" name="AddColumnWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>313</width>
+    <height>180</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">AddColumnWidget{
+	border : 1px solid green
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <spacer name="_ignore_horizontal_spacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QWidget" name="frame_widget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QGridLayout" name="_ignore_grid_layout">
+        <item row="4" column="1" colspan="2">
+         <layout class="QVBoxLayout" name="lyt_field"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="_ignore_label_3">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; color:#42a73d;&quot;&gt;Value will be used to fill data fields of existing rows.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>Default Value</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="_ignore_label_4">
+          <property name="text">
+           <string>Display Name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="le_dname"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="le_cname"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="cb_dtype">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <item>
+           <property name="text">
+            <string>int32</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>int64</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>float32</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>float64</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>string</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>boolean</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>date</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>date_time</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="_ignore_label_2">
+          <property name="text">
+           <string>Column Name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="_ingore_label_2">
+          <property name="text">
+           <string>Data Type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1" colspan="2">
+         <widget class="QComboBox" name="cb_fill_type">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>Use Value</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Use Formulae To Generate Value</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Auto Increament</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="_ignore_horizontal_layout_4">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <spacer name="_ignore_horizontal_spacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_add_column">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Add New Column</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="_ignore_vertical_spacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="_ignore_horizontal_spacer_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

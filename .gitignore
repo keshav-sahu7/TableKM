@@ -1,0 +1,5 @@
+KMTableLib/
+build/
+*.USER
+*.pro
+.vscode/*

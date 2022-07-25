@@ -1,0 +1,19 @@
+body {
+    font-size: large;
+}
+
+.datatype {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.function {
+    color: green;
+    font-weight: bold;
+}
+
+.param {
+    color: grey;
+    font-weight: bold;
+}

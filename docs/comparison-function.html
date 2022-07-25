@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Comparison Functions </title>
+    <style>
+        
+        body {
+            font-size: large;
+        }
+        
+        .datatype {
+            color: blue;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .function {
+            color: green;
+            font-weight: bold;
+        }
+        
+        .param {
+            color: grey;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h3>This is the list of available comparison functions.</h3>
+    <ul>
+        
+        <br><li>
+            <div id="func:isEqual">
+                <span class="datatype"> boolean </span> <span class="function"> isEqual </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isEqual </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isEqual </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isEqual </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isEqual </span>( <span class="datatype"> string </span> <span class="param">  value1</span>, <span class="datatype"> string </span> <span class="param">  value2</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isEqual </span>( <span class="datatype"> date </span> <span class="param">  value1</span>, <span class="datatype"> date </span> <span class="param">  value2</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isEqual </span>( <span class="datatype"> date_time </span> <span class="param">  value1</span>, <span class="datatype"> date_time </span> <span class="param">  value2</span>)
+                <p>
+                    Compares <span class="param">  value1</span> and <span class="param">  value2</span> for equality. If <span class="param">  value1</span> == <span class="param">  value2</span> then returns True, otherwise False.
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:isLess">
+                <span class="datatype"> boolean </span> <span class="function"> isLess </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLess </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLess </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLess </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLess </span>( <span class="datatype"> string </span> <span class="param">  value1</span>, <span class="datatype"> string </span> <span class="param">  value2</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLess </span>( <span class="datatype"> date </span> <span class="param">  value1</span>, <span class="datatype"> date </span> <span class="param">  value2</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLess </span>( <span class="datatype"> date_time </span> <span class="param">  value1</span>, <span class="datatype"> date_time </span> <span class="param">  value2</span>)
+                <p>
+                    Returns whether <span class="param">  value1</span> &lt; <span class="param">  value2</span>.
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:isGreater">
+                <span class="datatype"> boolean </span> <span class="function"> isGreater </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreater </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreater </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreater </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreater </span>( <span class="datatype"> string </span> <span class="param">  value1</span>, <span class="datatype"> string </span> <span class="param">  value2</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreater </span>( <span class="datatype"> date </span> <span class="param">  value1</span>, <span class="datatype"> date </span> <span class="param">  value2</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreater </span>( <span class="datatype"> date_time </span> <span class="param">  value1</span>, <span class="datatype"> date_time </span> <span class="param">  value2</span>)
+                <p>
+                    Returns whether <span class="param">  value1</span> &gt; <span class="param">  value2</span>.
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:isLessOrEqual">
+                <span class="datatype"> boolean </span> <span class="function"> isLessOrEqual </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLessOrEqual </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLessOrEqual </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLessOrEqual </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLessOrEqual </span>( <span class="datatype"> string </span> <span class="param">  value1</span>, <span class="datatype"> string </span> <span class="param">  value2</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLessOrEqual </span>( <span class="datatype"> date </span> <span class="param">  value1</span>, <span class="datatype"> date </span> <span class="param">  value2</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isLessOrEqual </span>( <span class="datatype"> date_time </span> <span class="param">  value1</span>, <span class="datatype"> date_time </span> <span class="param">  value2</span>)
+                <p>
+                    Returns whether <span class="param">  value1</span> &lt;= <span class="param">  value2</span>.
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:isGreaterOrEqual">
+                <span class="datatype"> boolean </span> <span class="function"> isGreaterOrEqual </span>( <span class="datatype"> int32 </span> <span class="param">  value1</span> , <span class="datatype"> int32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreaterOrEqual </span>( <span class="datatype"> int64 </span> <span class="param">  value1</span> , <span class="datatype"> int64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreaterOrEqual </span>( <span class="datatype"> float32 </span> <span class="param">  value1</span> , <span class="datatype"> float32 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreaterOrEqual </span>( <span class="datatype"> float64 </span> <span class="param">  value1</span> , <span class="datatype"> float64 </span> <span class="param">  value2</span> ) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreaterOrEqual </span>( <span class="datatype"> string </span> <span class="param">  value1</span>, <span class="datatype"> string </span> <span class="param">  value2</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreaterOrEqual </span>( <span class="datatype"> date </span> <span class="param">  value1</span>, <span class="datatype"> date </span> <span class="param">  value2</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function"> isGreaterOrEqual </span>( <span class="datatype"> date_time </span> <span class="param">  value1</span>, <span class="datatype"> date_time </span> <span class="param">  value2</span>)
+                <p>
+                    Returns whether <span class="param">  value1</span> &gt;= <span class="param">  value2</span>.
+                </p>
+            </div>
+        </li><br>
+    </ul>
+    
+
+	<a href="index.html"> Home Page </a>
+</body>
+
+</html>

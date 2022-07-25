@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Type Conversion Functions </title>
+    <style>
+        
+        body {
+            font-size: large;
+        }
+        
+        .datatype {
+            color: blue;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .function {
+            color: green;
+            font-weight: bold;
+        }
+        
+        .param {
+            color: grey;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h3>This is the list of available type conversion functions.</h3>
+    <ul>
+        <br><li>
+            <div id="func:toInt32">
+                <span class="datatype"> int32 </span> <span class="function">  toInt32</span>( <span class="datatype"> int64 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> int32 </span> <span class="function">  toInt32</span>( <span class="datatype"> float32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> int32 </span> <span class="function">  toInt32</span>( <span class="datatype"> float64 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> int32 </span> <span class="function">  toInt32</span>( <span class="datatype"> boolean </span> <span class="param">  value</span>)
+                <p>
+                    Converts <span class="param">  value</span> of other numeric type to <span class="datatype"> int32 </span>. Be aware this may cause overflow or underflow.
+                    In case of <span class="datatype"> boolean </span>, True is converted to 1 and False is converted to 0.
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:toInt32B">
+                <span class="datatype"> int32 </span> <span class="function">  toInt32</span>( <span class="datatype"> string </span> <span class="param">  value</span>, <span class="datatype"> int32 </span> <span class="param"> alternative</span> = 0) <br>  
+                <span class="datatype"> int32 </span> <span class="function">  toInt32B</span>( <span class="datatype"> string </span> <span class="param">  value</span>, <span class="datatype"> int32 </span> base, <span class="datatype"> int32 </span> <span class="param"> alternative</span> = 0) 
+                <p>
+                    Converts <span class="datatype"> string </span> <span class="param">  value</span> to <span class="datatype"> int32 </span>, if <span class="param">  value</span> can not be converted to <span class="datatype"> int32 </span> then <span class="param"> alternative</span> is returned.
+                    Default is 0 if ommitted.
+                    base is base of integer. In first function it is 10, in second function, base will be provided by
+                    user.
+                    2,8,10,16 are popular base for numbers.
+                    For example, toInt32B("A",16) = 10, toInt32B("A",10,100) = 100.
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:toInt64">
+                <span class="datatype"> int32 </span> <span class="function">  toInt64</span>( <span class="datatype"> int32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> int32 </span> <span class="function">  toInt64</span>( <span class="datatype"> float32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> int32 </span> <span class="function">  toInt64</span>( <span class="datatype"> float64 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> int32 </span> <span class="function">  toInt64</span>( <span class="datatype"> boolean </span> <span class="param">  value</span>)
+                <p>
+                    Converts <span class="param">  value</span> of other numeric type to <span class="datatype"> int64 </span>. Be aware this may cause overflow or underflow in case
+                    if <span class="param">  value</span> is <span class="datatype"> float32 </span> or <span class="datatype"> float64 </span>.
+                    In case of <span class="datatype"> boolean </span>, True is converted to 1 and False is converted to 0.
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:toInt64B">
+                <span class="datatype"> int64 </span> <span class="function">  toInt64</span>( <span class="datatype"> string </span> <span class="param">  value</span>, <span class="datatype"> int64 </span> <span class="param"> alternative</span> = 0) <br>  
+                <span class="datatype"> int64 </span> <span class="function">  toInt64B</span>( <span class="datatype"> string </span> <span class="param">  value</span>, <span class="datatype"> int32 </span> base, <span class="datatype"> int64 </span> <span class="param"> alternative</span> = 0) 
+                <p>
+                    Converts <span class="datatype"> string </span> <span class="param">  value</span> to <span class="datatype"> int64 </span>, if <span class="param">  value</span> can not be converted to <span class="datatype"> int64 </span> then <span class="param"> alternative</span> is returned.
+                    Default is 0 if ommitted.
+                    base is base of integer. In first function it is 10, in second function, base will be provided by
+                    user.
+                    2,8,10,16 are popular base for numbers.
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:toFloat32">
+                <span class="datatype"> float32 </span> <span class="function">  toFloat32</span>( <span class="datatype"> int32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float32 </span> <span class="function">  toFloat32</span>( <span class="datatype"> int64 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float32 </span> <span class="function">  toFloat32</span>( <span class="datatype"> float64 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float32 </span> <span class="function">  toFloat32</span>( <span class="datatype"> string </span> <span class="param">  value</span>, <span class="datatype"> float32 </span> <span class="param"> alternative</span> = 0) 
+                <p>
+                    Converts <span class="param">  value</span> of other numeric type to <span class="datatype"> float32 </span>. In case of <span class="datatype"> string </span> <span class="param">  value</span> to <span class="datatype"> float32 </span>, <span class="param"> alternative</span> is
+                    returned if it fails to convert <span class="param">  value</span> to <span class="datatype"> float32 </span>, default <span class="param"> alternative</span> is 0.
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:toFloat64">
+                <span class="datatype"> float64 </span> <span class="function">  toFloat64</span>( <span class="datatype"> int32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float64 </span> <span class="function">  toFloat64</span>( <span class="datatype"> int64 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float64 </span> <span class="function">  toFloat64</span>( <span class="datatype"> float32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> float64 </span> <span class="function">  toFloat64</span>( <span class="datatype"> string </span> <span class="param">  value</span>, <span class="datatype"> float32 </span> <span class="param"> alternative</span> = 0)
+                <p>
+                    Converts <span class="param">  value</span> of other numeric type to <span class="datatype"> float64 </span>. In case of <span class="datatype"> string </span> <span class="param">  value</span> to <span class="datatype"> float64 </span>, <span class="param"> alternative</span> is
+                    returned if it fails to convert <span class="param">  value</span> to <span class="datatype"> float64 </span>, default <span class="param"> alternative</span> is 0.
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:toString">
+                <span class="datatype"> string </span> <span class="function">  toString</span>( <span class="datatype"> int32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> string </span> <span class="function">  toString</span>( <span class="datatype"> int64 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> string </span> <span class="function">  toString</span>( <span class="datatype"> float32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> string </span> <span class="function">  toString</span>( <span class="datatype"> float64 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> string </span> <span class="function">  toString</span>( <span class="datatype"> boolean </span> <span class="param">  value</span>)
+                <p>
+                    Converts <span class="param">  value</span> of any numeric type to <span class="datatype"> string </span>. 10 is used as base for integers. In case of <span class="datatype"> boolean </span>
+                    <span class="param">  value</span>, True is converted to "True" and False is converted to "False"
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:toBoolean">
+                <span class="datatype"> boolean </span> <span class="function">  toBoolean</span>( <span class="datatype"> int32 </span> <span class="param">  value</span>) <br>  
+                <span class="datatype"> boolean </span> <span class="function">  toBoolean</span>( <span class="datatype"> int64 </span> <span class="param">  value</span>) <br> 
+                <p>
+                    If <span class="param">  value</span> is nonzero then True is returned, False otherwise.
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:toDate">
+                <span class="datatype"> date </span> <span class="function">  toDate</span>( <span class="datatype"> int32 </span> <span class="param"> day</span>, <span class="datatype"> int32 </span> <span class="param"> month</span>, <span class="datatype"> int32 </span> <span class="param"> year</span>)
+                <p>
+                    Date is constructed by given <span class="param"> day</span>, <span class="param"> month</span> and <span class="param"> year</span>. Note : it doesn't check for validity of the <span class="datatype"> date </span>.
+                    It is user's responsiblity.
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:toDateTime">
+                <span class="datatype"> date_time </span> <span class="function">  toDateTime</span>( <span class="datatype"> int32 </span> <span class="param"> day</span>, <span class="datatype"> int32 </span> <span class="param"> month</span>, <span class="datatype"> int32 </span> <span class="param"> year</span>, <span class="datatype"> int32 </span> <span class="param"> hour</span>, <span class="datatype"> int32 </span> <span class="param"> minute</span>, <span class="datatype"> int32 </span> <span class="param"> second</span>) <br>  
+                <span class="datatype"> date_time </span> <span class="function">  toDateTime</span>( <span class="datatype"> date </span> <span class="param"> date_value</span>, <span class="datatype"> int32 </span> <span class="param"> hour</span>, <span class="datatype"> int32 </span> <span class="param"> minute</span>, <span class="datatype"> int32 </span> <span class="param"> second</span>)
+                <p>
+                    Date is constructed by given <span class="datatype"> date </span> and time components. Note : it doesn't check for validity of the <span class="datatype"> date </span>.
+                    It is user's responsiblity.
+                </p>
+            </div>
+        </li><br>
+    </ul>
+    
+
+	<a href="index.html"> Home Page </a>
+</body>
+
+</html>

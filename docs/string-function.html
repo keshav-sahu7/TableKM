@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> String Functions </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            font-size: large;
+        }
+        
+        .datatype {
+            color: blue;
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        .function {
+            color: green;
+            font-weight: bold;
+        }
+        
+        .param {
+            color: grey;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h3>This is the list of available string functions.</h3>
+    <ul>
+        <br><li>
+            <div id="func:length">
+                <span class="datatype"> int32 </span> <span class="function">  length</span>(<span class="datatype"> string </span> <span class="param">  value</span>)
+                <p>
+                    Returns length of <span class="datatype"> string </span> <span class="param">  value</span>, it returns length of total bytes so only applicable on Latin chars.
+                    For example, length("ABCD") = 4.
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:concatenate">
+                <span class="datatype"> int32 </span> <span class="function">  concatenate</span>(<span class="datatype"> string </span> <span class="param">  value1</span>, <span class="datatype"> string </span> <span class="param">  value2</span>)
+                <p>
+                    Returns <span class="param">  value1</span> + <span class="param">  value2</span>. For example, concatenate("Apple ","Banana") = "Apple Banana"
+                </p>
+            </div>
+        </li><br>
+        
+        <br><li>
+            <div id="func:lowerCase">
+                <div id="func:toLower">
+                    <span class="datatype"> string </span> <span class="function">  lowerCase</span>(<span class="datatype"> string </span> <span class="param">  value</span>) <br>  
+                    <span class="datatype"> string </span> <span class="function">  toLower</span>(<span class="datatype"> string </span> <span class="param">  value</span>) 
+                    <p>
+                        Returns lower case form of the <span class="param">  value</span>. For example, toLower("Billy Jack") = "billy jack".
+                    </p>
+                </div>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:upperCase">
+                <div id="func:toUpper">
+                    <span class="datatype"> string </span> <span class="function">  upperCase</span>(<span class="datatype"> string </span> <span class="param">  value</span>) <br>
+                    <span class="datatype"> string </span> <span class="function">  toUpper</span>(<span class="datatype"> string </span> <span class="param">  value</span>)
+                    <p>
+                        Returns upper case form of the <span class="param"> value</span>. For example, toUpper("Billy Jack") = "BILLY JACK".
+                    </p>
+                </div>
+            </div>
+        </li><br>
+
+        
+        <br><li>
+            <div id="func:countChar">
+                <span class="datatype"> int32 </span> <span class="function"> countChar</span>(<span class="datatype"> string </span> <span class="param">  source</span>, <span class="datatype"> string </span> <span class="param">  char</span>) <br> 
+                <p>
+                    Counts the number of appearance of <span class="param"> char</span>'s first byte in <span class="param">  source</span>. If char is empty then 0 is returned.
+                    If it contains multiple chars, only first char will be searched.
+                    For example, countChar("hello", "l except l other chars will be ignored") = 2.
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:contains">
+                <span class="datatype"> boolean </span> <span class="function">  contains</span>(<span class="datatype"> string </span> <span class="param">  source</span>, <span class="datatype"> string </span> <span class="param">  sub_str</span>)
+                <p>
+                    Returns True if <span class="param">  sub_str</span> is a sub <span class="datatype"> string </span> in <span class="param">  source</span>, False otherwise.
+                    For example, contains("Hello World!", "ello") = True
+                </p>
+            </div>
+        </li><br>
+        <br><li>
+            <div id="func:containsAnyOf">
+                <span class="datatype"> boolean </span> <span class="function">  containsAnyOf</span>(<span class="datatype"> string </span> <span class="param">  source</span>, <span class="datatype"> string </span> <span class="param">  char_group</span>)
+                <p>
+                    Returns True if any char from <span class="param">  char_group</span> exists in <span class="param">  source</span>.
+                    For example, containsAnyOf("A sentense", "aeiou") = True
+                </p>
+            </div>
+        </li><br>
+    </ul>
+    
+
+	<a href="index.html"> Home Page </a>
+</body>
+
+</html>
