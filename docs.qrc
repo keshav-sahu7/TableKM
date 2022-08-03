@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/welcom">
-        <file>docs/welcom/welcome.html</file>
-    </qresource>
-</RCC>
