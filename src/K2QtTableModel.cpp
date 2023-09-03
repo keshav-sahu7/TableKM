@@ -17,7 +17,7 @@
 #include "DummyBasicView.hpp"
 #include "datafmts/CommonDataFormats.hpp"
 #include "rwview/ViewReadWrite.hpp"
-#include "IconProvider.hpp"
+#include "ThemeHandler.hpp"
 #include "misc/KDefines.h"
 #include "misc/SwitchLogHandlerHelper_.hpp"
 
@@ -133,7 +133,7 @@ QVariant K2QtTableModel::headerData(int section, Qt::Orientation orientation, in
     if(orientation == Qt::Orientation::Horizontal && static_cast<km::IndexType>(section) < m_table->columnCount())
     {
         if(role == Qt::DisplayRole)
-            return K_SQ_STR(m_table->columnAt(section).value().first);
+            return K_SQ_STR(m_table->getDisplayName(section));
         else if(getAbsTable()->getKeyColumn() == km::IndexType(section))
             return getAbsTable()->getSortingOrder() == km::SortingOrder::ASCENDING ? icons::getIcon("ascending") : icons::getIcon("descending");
     }

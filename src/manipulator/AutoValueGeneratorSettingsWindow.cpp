@@ -13,7 +13,7 @@
 #include "../KmtFuncPopupEditor.hpp"
 #include "../misc/SwitchLogHandlerHelper_.hpp"
 #include "../CustomErrMsgBox.hpp"
-#include "../IconProvider.hpp"
+#include "../ThemeHandler.hpp"
 
 
 #define COLUMN_NAME 0
@@ -33,7 +33,7 @@ AutoValueGeneratorSettingsWindow::AutoValueGeneratorSettingsWindow(DataEvaluator
     m_ui->setupUi(this);
     setWindowFlag(as_dialog ? Qt::Dialog : Qt::Widget);
 
-    m_ui->lb_warning_icon->setPixmap(QPixmap(":/icons/warning.png").scaled(QSize(16,16)));
+    m_ui->lb_warning_icon->setPixmap(icons::getIcon("warning").pixmap(QSize(16,16)));
 
     m_status_list.resize(m_eval_data.size(), true);
     QWidgetList ef_ignore_list;

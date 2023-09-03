@@ -6,7 +6,7 @@
 #include "DropRowWidget.hpp"
 #include "TransformColumnWidget.hpp"
 
-#include "../IconProvider.hpp"
+#include "../ThemeHandler.hpp"
 
 TableManipulator::TableManipulator(K2QtTableModel *model/*, const std::vector<QString> &default_values*/, QWidget *parent) :
     DockWidget(QString(),parent),

@@ -6,7 +6,7 @@
 #include "../K2QtTableModel.hpp"
 #include "ManipulatorHelperFncs_.hpp"
 #include "../misc/KDefines.h"
-
+#include "../ThemeHandler.hpp"
 #include <QComboBox>
 #include <QDateEdit>
 #include <QFormLayout>
@@ -14,7 +14,7 @@
 #include <QToolTip>
 #include <QScreen>
 
-AddRowWidget::AddRowWidget(K2QtTableModel *model/*, const std::vector<QString> &default_values*/, QWidget *parent) :
+AddRowWidget::AddRowWidget(K2QtTableModel *model, QWidget *parent) :
     QWidget(parent),
     m_ui(new Ui::AddRowWidget),
     m_model(model)
@@ -22,6 +22,8 @@ AddRowWidget::AddRowWidget(K2QtTableModel *model/*, const std::vector<QString> &
     m_ui->setupUi(this);
 
     m_ui->frame_widget->setMaximumWidth(qApp->primaryScreen()->availableSize().width() * 0.5);
+
+    m_ui->btn_show_settings->setIcon(icons::getIcon("settings"));
     //create a form layout and add all nessessary information
     m_form_layout = new QFormLayout();
 
@@ -47,6 +49,8 @@ AddRowWidget::AddRowWidget(K2QtTableModel *model/*, const std::vector<QString> &
     m_evaluator = new DataEvaluator(this);
     //m_evaluator->setColumnDetails(model,evaluator_data_list);
     m_ui->main_area->setLayout(m_form_layout);
+
+
 
     connectInputWidgets();
     //connect signals and slots

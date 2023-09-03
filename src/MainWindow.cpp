@@ -10,10 +10,10 @@
 #include "K2QtTableModel.hpp"
 #include "AboutUs.hpp"
 #include "CreateTableDialog.hpp"
-#include "IconProvider.hpp"
+#include "ThemeHandler.hpp"
 #include "manipulator/TableManipulator.hpp"
 #include "ProjectView.hpp"
-#include "ViewDialog.hpp"
+#include "CreateViewDialog.hpp"
 #include "OpenTableDialog.hpp"
 #include "QueryDialog.hpp"
 #include "WelcomePage.hpp"
@@ -116,7 +116,7 @@ void MainWindow::createNewView()
     K_RETURN_IF_NOT(action);
 
     K2QtTableModel *parent_model = action->data().value<K2QtTableModel*>();
-    ViewDialog view_dlg(parent_model->getAbsTable(),this);
+    CreateViewDialog view_dlg(parent_model->getAbsTable(),this);
     view_dlg.setModal(true);
     if(view_dlg.exec())
     {

@@ -6,7 +6,7 @@
 #include <QDebug>
 
 #include "K2QtTableModel.hpp"
-#include "IconProvider.hpp"
+#include "ThemeHandler.hpp"
 #include "datafmts/CommonDataFormats.hpp"
 #include "datafmts/ColorUtilities.hpp"
 

@@ -1,5 +1,5 @@
-#include "ViewDialog.hpp"
-#include "ui_ViewDialog.h"
+#include "CreateViewDialog.hpp"
+#include "ui_CreateViewDialog.h"
 
 #include <QCheckBox>
 #include <QMessageBox>
@@ -11,13 +11,13 @@
 #include "misc/KDefines.h"
 
 #define K_SWAP_DATA(obj1, obj2, set, get)\
-    {\
+{\
         auto tmp = obj1->get();\
         obj1->set(obj2->get());\
         obj2->set(tmp);\
-    }\
+}\
 
-ViewDialog::ViewDialog(km::AbstractTable *source, QWidget *parent) :
+    CreateViewDialog::CreateViewDialog(km::AbstractTable *source, QWidget *parent) :
     QDialog(parent),
     m_ui(new Ui::ViewDialog),
     m_view(nullptr),
@@ -59,31 +59,31 @@ ViewDialog::ViewDialog(km::AbstractTable *source, QWidget *parent) :
     m_popup_editor->ignoreEventsOf({m_ui->le_formula});
     m_popup_editor->setAbsTable(source,km::DataType::BOOLEAN);
 
-    connect(m_ui->le_formula, &LineEdit::focusGained, this, &ViewDialog::popupEditor);
-    connect(m_popup_editor, &KmtFuncPopupEditor::popupHidden, this, &ViewDialog::popupEditorLostFocus);
-    connect(m_ui->btn_move_up, &QPushButton::clicked, this, &ViewDialog::columnMoveUp);
-    connect(m_ui->btn_move_down, &QPushButton::clicked, this, &ViewDialog::columnMoveDown);
-    connect(m_ui->btn_select_all, &QPushButton::clicked, this, &ViewDialog::selectAll);
-    connect(m_ui->btn_deselect_all, &QPushButton::clicked, this, &ViewDialog::deselectAll);
-    connect(m_ui->btn_invert_selection, &QPushButton::clicked, this, &ViewDialog::invertSelections);
-    connect(m_ui->btn_create_view, &QPushButton::clicked, this, &ViewDialog::createView);
+    connect(m_ui->le_formula, &LineEdit::focusGained, this, &CreateViewDialog::popupEditor);
+    connect(m_popup_editor, &KmtFuncPopupEditor::popupHidden, this, &CreateViewDialog::popupEditorLostFocus);
+    connect(m_ui->btn_move_up, &QPushButton::clicked, this, &CreateViewDialog::columnMoveUp);
+    connect(m_ui->btn_move_down, &QPushButton::clicked, this, &CreateViewDialog::columnMoveDown);
+    connect(m_ui->btn_select_all, &QPushButton::clicked, this, &CreateViewDialog::selectAll);
+    connect(m_ui->btn_deselect_all, &QPushButton::clicked, this, &CreateViewDialog::deselectAll);
+    connect(m_ui->btn_invert_selection, &QPushButton::clicked, this, &CreateViewDialog::invertSelections);
+    connect(m_ui->btn_create_view, &QPushButton::clicked, this, &CreateViewDialog::createView);
 }
 
-km::BasicView *ViewDialog::getView()
+km::BasicView *CreateViewDialog::getView()
 {
     auto view = m_view;
     m_view = nullptr;
     return view;
 }
 
-ViewDialog::~ViewDialog()
+CreateViewDialog::~CreateViewDialog()
 {
     if(m_view)
         delete m_view;
     delete m_ui;
 }
 
-void ViewDialog::columnMoveUp()
+void CreateViewDialog::columnMoveUp()
 {
     int count = m_ui->table_widget->rowCount();
     if (count <= 1)
@@ -95,7 +95,7 @@ void ViewDialog::columnMoveUp()
     m_ui->table_widget->selectRow(swap_with);
 }
 
-void ViewDialog::columnMoveDown()
+void CreateViewDialog::columnMoveDown()
 {
     int count = m_ui->table_widget->rowCount();
     if (count <= 1)
@@ -107,7 +107,7 @@ void ViewDialog::columnMoveDown()
     m_ui->table_widget->selectRow(swap_with);
 }
 
-void ViewDialog::selectAll()
+void CreateViewDialog::selectAll()
 {
     for(int i = 0, count = m_ui->table_widget->rowCount(); i < count; ++i)
     {
@@ -115,7 +115,7 @@ void ViewDialog::selectAll()
     }
 }
 
-void ViewDialog::deselectAll()
+void CreateViewDialog::deselectAll()
 {
     for(int i = 0, count = m_ui->table_widget->rowCount(); i < count; ++i)
     {
@@ -123,7 +123,7 @@ void ViewDialog::deselectAll()
     }
 }
 
-void ViewDialog::invertSelections()
+void CreateViewDialog::invertSelections()
 {
     for(int i = 0, count = m_ui->table_widget->rowCount(); i < count; ++i)
     {
@@ -132,7 +132,7 @@ void ViewDialog::invertSelections()
     }
 }
 
-void ViewDialog::createView()
+void CreateViewDialog::createView()
 {
     const std::string view_name = m_ui->le_view_name->text().toStdString();
     std::vector<std::string> columns;
@@ -165,20 +165,20 @@ void ViewDialog::createView()
 
 }
 
-void ViewDialog::popupEditor()
+void CreateViewDialog::popupEditor()
 {
     auto point = this->mapFromGlobal(m_ui->le_formula->mapToGlobal(QPoint(0,0)));
     auto size = QSize(m_ui->le_formula->width(), m_popup_editor->heightForLines(8));
     m_popup_editor->popup(point,size);
 }
 
-void ViewDialog::popupEditorLostFocus()
+void CreateViewDialog::popupEditorLostFocus()
 {
     m_ui->le_formula->setText(m_popup_editor->getExpr().replace('\n',' ').replace('\t',' '));
 }
 
 
-void ViewDialog::swapRows(int i1, int i2)
+void CreateViewDialog::swapRows(int i1, int i2)
 {
     QCheckBox *selected_1 = dynamic_cast<QCheckBox*>(m_ui->table_widget->cellWidget(i1,0));
     QCheckBox *selected_2 = dynamic_cast<QCheckBox*>(m_ui->table_widget->cellWidget(i2,0));

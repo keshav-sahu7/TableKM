@@ -4,65 +4,75 @@
 #include <QCompleter>
 #include <QFile>
 
+#include "ThemeHandler.hpp"
 #include "misc/KDefines.h"
 
 QMap<std::string,std::string> HelpPage::map
 {
-    {"add", "arithmetic-function"},
-    {"subtract", "arithmetic-function"},
-    {"sub", "arithmetic-function"},
-    {"multiply", "arithmetic-function"},
-    {"mul", "arithmetic-function"},
-    {"divide", "arithmetic-function"},
-    {"div", "arithmetic-function"},
-    {"intDiv", "arithmetic-function"},
-    {"mod", "arithmetic-function"},
-    {"sqrt", "arithmetic-function"},
-    {"pow", "arithmetic-function"},
-    {"abs", "arithmetic-function"},
-    {"ceil", "arithmetic-function"},
-    {"floor", "arithmetic-function"},
-    {"isInRange", "arithmetic-function"},
+    {"add", "arithmetic-function.html#func:"},
+    {"subtract", "arithmetic-function.html#func:"},
+    {"sub", "arithmetic-function.html#func:"},
+    {"multiply", "arithmetic-function.html#func:"},
+    {"mul", "arithmetic-function.html#func:"},
+    {"divide", "arithmetic-function.html#func:"},
+    {"div", "arithmetic-function.html#func:"},
+    {"intDiv", "arithmetic-function.html#func:"},
+    {"mod", "arithmetic-function.html#func:"},
+    {"sqrt", "arithmetic-function.html#func:"},
+    {"pow", "arithmetic-function.html#func:"},
+    {"abs", "arithmetic-function.html#func:"},
+    {"ceil", "arithmetic-function.html#func:"},
+    {"floor", "arithmetic-function.html#func:"},
+    {"isInRange", "arithmetic-function.html#func:"},
 
-    {"isEqual","comparison-function"},
-    {"isLess","comparison-function"},
-    {"isGreater","comparison-function"},
-    {"isLessOrEqual","comparison-function"},
-    {"isGreaterOrEqual","comparison-function"},
+    {"isEqual","comparison-function.html#func:"},
+    {"isLess","comparison-function.html#func:"},
+    {"isGreater","comparison-function.html#func:"},
+    {"isLessOrEqual","comparison-function.html#func:"},
+    {"isGreaterOrEqual","comparison-function.html#func:"},
 
-    {"NOT", "logical-function"},
-    {"AND", "logical-function"},
-    {"OR", "logical-function"},
-    {"IF", "logical-function"},
+    {"NOT", "logical-function.html#func:"},
+    {"AND", "logical-function.html#func:"},
+    {"OR", "logical-function.html#func:"},
+    {"IF", "logical-function.html#func:"},
 
-    {"toInt32", "type-conversion-function"},
-    {"toInt32B", "type-conversion-function"},
-    {"toInt64", "type-conversion-function"},
-    {"toInt64B", "type-conversion-function"},
-    {"toFloat32", "type-conversion-function"},
-    {"toFloat64", "type-conversion-function"},
-    {"toString", "type-conversion-function"},
-    {"toBoolean", "type-conversion-function"},
-    {"toDate", "type-conversion-function"},
-    {"toDateTime", "type-conversion-function"},
+    {"toInt32", "type-conversion-function.html#func:"},
+    {"toInt32B", "type-conversion-function.html#func:"},
+    {"toInt64", "type-conversion-function.html#func:"},
+    {"toInt64B", "type-conversion-function.html#func:"},
+    {"toFloat32", "type-conversion-function.html#func:"},
+    {"toFloat64", "type-conversion-function.html#func:"},
+    {"toString", "type-conversion-function.html#func:"},
+    {"toBoolean", "type-conversion-function.html#func:"},
+    {"toDate", "type-conversion-function.html#func:"},
+    {"toDateTime", "type-conversion-function.html#func:"},
 
-    {"length", "string-function"},
-    {"concatenate", "string-function"},
-    {"lowerCase", "string-function"},
-    {"toLower", "string-function"},
-    {"upperCase", "string-function"},
-    {"toUpper", "string-function"},
-    {"countChar","string-function"},
-    {"contains","string-function"},
-    {"containsAnyOf","string-function"},
+    {"length", "string-function.html#func:"},
+    {"concatenate", "string-function.html#func:"},
+    {"lowerCase", "string-function.html#func:"},
+    {"toLower", "string-function.html#func:"},
+    {"upperCase", "string-function.html#func:"},
+    {"toUpper", "string-function.html#func:"},
+    {"countChar","string-function.html#func:"},
+    {"contains","string-function.html#func:"},
+    {"containsAnyOf","string-function.html#func:"},
 
-    {"day", "date-function"},
-    {"month", "date-function"},
-    {"year", "date-function"},
-    {"hour", "date-function"},
-    {"minute", "date-function"},
-    {"second", "date-function"},
-    {"isLeapYear", "date-function"}
+    {"day", "date-function.html#func:"},
+    {"month", "date-function.html#func:"},
+    {"year", "date-function.html#func:"},
+    {"hour", "date-function.html#func:"},
+    {"minute", "date-function.html#func:"},
+    {"second", "date-function.html#func:"},
+    {"isLeapYear", "date-function.html#func:"},
+
+    {"int32", "types.html#type:"},
+    {"int64", "types.html#type:"},
+    {"float32", "types.html#type:"},
+    {"float64", "types.html#type:"},
+    {"string", "types.html#type:"},
+    {"boolean", "types.html#type:"},
+    {"date", "types.html#type:"},
+    {"datetime", "types.html#type:"}
 };
 
 HelpPage::HelpPage(QWidget *parent) :
@@ -73,7 +83,8 @@ HelpPage::HelpPage(QWidget *parent) :
     setObjectName("HelpPage");
     m_ui->browser->setSearchPaths({":/docs"});
     m_ui->browser->setSource(QUrl("index.html"));
-
+    m_ui->btn_home->setIcon(icons::getIcon("home"));
+    m_ui->btn_search->setIcon(icons::getIcon("search"));
 
 
     QStringList completion;
@@ -108,7 +119,7 @@ void HelpPage::searchFunction()
     {
         auto it = map.find(str.toStdString());
         if(it != map.end()){
-            m_ui->browser->setSource(QUrl(QString("%2.html#func:%1").arg(it.key().c_str(), it.value().c_str())));
+            m_ui->browser->setSource(QUrl(QString("%2%1").arg(it.key().c_str(), it.value().c_str())));
         }
     }
 }

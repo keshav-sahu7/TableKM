@@ -13,11 +13,14 @@
   <property name="windowTitle">
    <string>About TableKM</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="_ignore_label">
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:700; font-style:italic; color:#5f3f6c;&quot;&gt;TableKM&lt;/span&gt;&lt;span style=&quot; font-size:22pt; font-weight:700; font-style:italic; color:#5f3f6c; vertical-align:super;&quot;&gt;v1.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:700; font-style:italic; color:#61de0d;&quot;&gt;TableKM&lt;/span&gt;&lt;span style=&quot; font-size:22pt; font-weight:700; font-style:italic; color:#61de0d; vertical-align:super;&quot;&gt;v1.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -25,7 +28,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QTextBrowser" name="_ignore_text_browser">
+    <widget class="QTextBrowser" name="_ignore_about_us_textbrowser">
      <property name="html">
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;

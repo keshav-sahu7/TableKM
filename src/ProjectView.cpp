@@ -1,17 +1,21 @@
 #include "ProjectView.hpp"
 
 #include "K2QtTableModel.hpp"
-#include "IconProvider.hpp"
+#include "ThemeHandler.hpp"
 #include "MainWindow.hpp"
 #include "TableInfoDialog.hpp"
 #include "misc/KDefines.h"
+
+#include <QHeaderView>
 
 
 
 ProjectView::ProjectView(MainWindow *main_window, QWidget *parent) : QTreeView(parent)
 {
+    //hide the header
+    header()->setHidden(true);
+
     m_model = new QStandardItemModel(this);
-    m_model->setHorizontalHeaderLabels({"Tables"});
     setModel(m_model);
 
     setContextMenuPolicy(Qt::CustomContextMenu);

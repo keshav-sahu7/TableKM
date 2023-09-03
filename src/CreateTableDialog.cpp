@@ -2,7 +2,6 @@
 
 #include <tuple>
 
-
 #include <QDir>
 #include <QStringBuilder>
 #include <QFormLayout>
@@ -10,14 +9,14 @@
 #include <QMessageBox>
 #include <QLineEdit>
 #include <QLabel>
+#include <QToolButton>
 
 #include <kmt/ErrorHandler.hpp>
 
 #include "KPairedLineEdit.hpp"
 #include "SyntaxHighlighter.hpp"
-#include "IconProvider.hpp"
+#include "ThemeHandler.hpp"
 #include "CustomErrMsgBox.hpp"
-
 #include "misc/ValidatorFactory.hpp"
 #include "misc/KDefines.h"
 
@@ -68,11 +67,17 @@ CreateTableDialog::CreateTableDialog(QWidget *parent) : QDialog(parent), m_table
     m_sorting_order->addItem(icons::getIcon("descending"), tr("Descending"));
 
     QHBoxLayout *path_layout = new QHBoxLayout();
+    path_layout->setSpacing(0);
     m_tspath = new QLineEdit(QDir::homePath(), this);
+    m_tspath->setProperty("-style-id","browse-edit");
     path_layout->addWidget(m_tspath);
 
-    QPushButton *browse_path = new QPushButton(tr("Browse"), this);
-    connect(browse_path, &QPushButton::clicked, this, &CreateTableDialog::browsePath);
+    QToolButton *browse_path = new QToolButton(this);
+    browse_path->setIcon(icons::getIcon("browse"));
+    browse_path->setIconSize(QSize(16,16));
+    browse_path->setProperty("-style-id","browse-btn");
+    browse_path->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Ignored);
+    connect(browse_path, &QToolButton::clicked, this, &CreateTableDialog::browsePath);
     path_layout->addWidget(browse_path);
 
     QGridLayout *grid_layout = new QGridLayout();
@@ -83,7 +88,7 @@ CreateTableDialog::CreateTableDialog(QWidget *parent) : QDialog(parent), m_table
     grid_layout->addWidget(new QLabel(tr("Path"),this),1,0,1,1);
     grid_layout->addLayout(path_layout,1,1,1,3);
 
-    QHBoxLayout *table_layout = new QHBoxLayout();
+    QVBoxLayout *table_layout = new QVBoxLayout();
 
     m_column_table = new QTableWidget(0, 3 /*4*/, this);
     QTableWidgetItem *hdr1 = new QTableWidgetItem(tr("Column Name"));
@@ -95,28 +100,32 @@ CreateTableDialog::CreateTableDialog(QWidget *parent) : QDialog(parent), m_table
     QTableWidgetItem *hdr3 = new QTableWidgetItem(tr("Display Name"));
     hdr3->setToolTip(tr("Display name will be used in entry form and for some other functionalities"));
     m_column_table->setHorizontalHeaderItem(2, hdr3);
-    //QTableWidgetItem *hdr4 = new QTableWidgetItem(tr("Default Value"));
-    //hdr4->setToolTip(tr("Default value will be added to entry form to make entry faster."));
-    //m_column_table->setHorizontalHeaderItem(3, hdr4);
 
+    // selection mode and behavior affair
     m_column_table->setSelectionMode(QAbstractItemView::SingleSelection);
     m_column_table->setSelectionBehavior(QAbstractItemView::SelectRows);
 
     insertColumn();
+
     dynamic_cast<KPairedLineEdit*>(m_column_table->cellWidget(0, 0))->setText("ID");
     m_column_table->item(0, 2)->setText("ID Number");
     table_layout->addWidget(m_column_table);
 
-    QPushButton *add_column = new QPushButton(icons::getIcon("add"), tr("Column"), this);
-    connect(add_column, &QPushButton::clicked, this, &CreateTableDialog::insertColumn);
-    QPushButton *remove_column = new QPushButton(icons::getIcon("remove"), tr("Column"), this);
-    connect(remove_column, &QPushButton::clicked, this, &CreateTableDialog::removeColumn);
-    QPushButton *up_column = new QPushButton(icons::getIcon("arrow up"), tr("Column"), this);
-    connect(up_column, &QPushButton::clicked, this, &CreateTableDialog::moveUpColumn);
-    QPushButton *down_column = new QPushButton(icons::getIcon("arrow down"), tr("Column"), this);
+    QToolButton *add_column = new QToolButton(this);
+    add_column->setIcon(icons::getIcon("add"));
+    connect(add_column, &QToolButton::clicked, this, &CreateTableDialog::insertColumn);
+    QToolButton *remove_column = new QToolButton(this);
+    remove_column->setIcon(icons::getIcon("remove"));
+    connect(remove_column, &QToolButton::clicked, this, &CreateTableDialog::removeColumn);
+    QToolButton *up_column = new QToolButton(this);
+    up_column->setIcon(icons::getIcon("arrow-up"));
+    connect(up_column, &QToolButton::clicked, this, &CreateTableDialog::moveUpColumn);
+    QToolButton *down_column = new QToolButton(this);
+    down_column->setIcon(icons::getIcon("arrow-down"));
     connect(down_column, &QPushButton::clicked, this, &CreateTableDialog::moveDownColumn);
 
-    QVBoxLayout *table_btn_layout = new QVBoxLayout();
+    QHBoxLayout *table_btn_layout = new QHBoxLayout();
+    table_btn_layout->addStretch();
     table_btn_layout->addWidget(add_column);
     table_btn_layout->addWidget(remove_column);
     table_btn_layout->addWidget(up_column);
@@ -141,12 +150,12 @@ CreateTableDialog::CreateTableDialog(QWidget *parent) : QDialog(parent), m_table
     setLayout(main_layout);
 }
 
-std::tuple<km::Table *, QString/*, std::vector<QString> */> CreateTableDialog::getTable(QWidget *parent)
+std::tuple<km::Table *, QString> CreateTableDialog::getTable(QWidget *parent)
 {
     CreateTableDialog dlg(parent);
     dlg.setModal(true);
     dlg.exec();
-    return std::make_tuple(dlg.getTable(), dlg.getPath()/*, dlg.getDefaultValues()*/);
+    return std::make_tuple(dlg.getTable(), dlg.getPath());
 }
 
 
@@ -169,13 +178,9 @@ void CreateTableDialog::insertColumn()
 
     //display name
     QTableWidgetItem *display_name = new QTableWidgetItem(QString("column_%1%2").arg(m_column_table->rowCount()).arg(index));
+    display_name->setBackground(Qt::transparent);
     column_name->setPair(display_name);
     m_column_table->setItem(index, 2, display_name);
-
-    //default value
-    //QLineEdit *default_value_edit = new QLineEdit();
-    //default_value_edit->setValidator(VldFactory::instance().validator(0));
-    //m_column_table->setCellWidget(index, 3, default_value_edit);
 
     m_column_table->selectRow(index);
 }

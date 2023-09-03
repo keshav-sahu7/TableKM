@@ -11,11 +11,11 @@ CONFIG += c++17
 SOURCES += \
     src/AboutUs.cpp \
     src/CreateTableDialog.cpp \
+    src/CreateViewDialog.cpp \
     src/CustomErrMsgBox.cpp \
     src/DockWidget.cpp \
     src/DummyBasicView.cpp \
     src/HelpPage.cpp \
-    src/IconProvider.cpp \
     src/K2QtTableModel.cpp \
     src/KPairedLineEdit.cpp \
     src/KmtFuncPopupEditor.cpp \
@@ -27,7 +27,7 @@ SOURCES += \
     src/SyntaxHighlighter.cpp \
     src/TableInfoDialog.cpp \
     src/TableView.cpp \
-    src/ViewDialog.cpp \
+    src/ThemeHandler.cpp \
     src/WelcomePage.cpp \
     src/datafmts/CellStyler.cpp \
     src/datafmts/ColorUtilities.cpp \
@@ -55,11 +55,11 @@ SOURCES += \
 HEADERS += \
     src/AboutUs.hpp \
     src/CreateTableDialog.hpp \
+    src/CreateViewDialog.hpp \
     src/CustomErrMsgBox.hpp \
     src/DockWidget.hpp \
     src/DummyBasicView.hpp \
     src/HelpPage.hpp \
-    src/IconProvider.hpp \
     src/K2QtTableModel.hpp \
     src/KPairedLineEdit.hpp \
     src/KmtFuncPopupEditor.hpp \
@@ -71,7 +71,8 @@ HEADERS += \
     src/SyntaxHighlighter.hpp \
     src/TableInfoDialog.hpp \
     src/TableView.hpp \
-    src/ViewDialog.hpp \
+    src/ThemeConsts.hpp \
+    src/ThemeHandler.hpp \
     src/WelcomePage.hpp \
     src/datafmts/CellStyler.hpp \
     src/datafmts/ColorUtilities.hpp \
@@ -122,20 +123,23 @@ INCLUDEPATH += $$PWD/src
 DEPENDPATH += $$PWD/KMTableLib/include
 
 RESOURCES += \
-    src/resource.qrc
+    src/resource.qrc \
+    themes/dark/external_theme.qrc
 
 FORMS += \
     src/AboutUs.ui \
+    src/CreateViewDialog.ui \
     src/HelpPage.ui \
     src/MainWindow.ui \
     src/OpenTableDialog.ui \
     src/QueryDialog.ui \
     src/TableInfoDialog.ui \
-    src/ViewDialog.ui \
     src/manipulator/AddColumnWidget.ui \
     src/manipulator/AddRowWidget.ui \
     src/manipulator/AutoValueGeneratorSettingsWindow.ui \
     src/manipulator/DropRowWidget.ui \
     src/manipulator/TableManipulator.ui \
     src/manipulator/TransformColumnWidget.ui
+
+DISTFILES +=
 

@@ -1,5 +1,5 @@
-#ifndef VIEWDIALOG_HPP
-#define VIEWDIALOG_HPP
+#ifndef CREATEVIEWDIALOG_HPP
+#define CREATEVIEWDIALOG_HPP
 
 #include <QDialog>
 #include <kmt/AbstractTable.hpp>
@@ -14,14 +14,14 @@ class KmtFuncPopupEditor;
 /**
  * This dialog *creates* a view of existing table.
  */
-class ViewDialog : public QDialog
+class CreateViewDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit ViewDialog(km::AbstractTable *source, QWidget *parent = nullptr);
+    explicit CreateViewDialog(km::AbstractTable *source, QWidget *parent = nullptr);
     km::BasicView *getView();
-    ~ViewDialog();
+    ~CreateViewDialog();
 private slots:
     void columnMoveUp();
     void columnMoveDown();
@@ -41,5 +41,4 @@ private:
 };
 
 
-
-#endif // VIEWDIALOG_HPP
+#endif // CREATEVIEWDIALOG_HPP

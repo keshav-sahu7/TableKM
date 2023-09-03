@@ -6,16 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>528</width>
-    <height>404</height>
+    <width>609</width>
+    <height>502</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Open Existing Table</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resource.qrc">
+   <iconset>
     <normaloff>:/icons/table.png</normaloff>:/icons/table.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -27,168 +30,339 @@
    </item>
    <item>
     <layout class="QHBoxLayout" name="_ignore_horizontal_layout_3">
+     <property name="spacing">
+      <number>0</number>
+     </property>
      <item>
-      <widget class="QLineEdit" name="le_file_path"/>
+      <widget class="QLineEdit" name="le_file_path">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="-style-id" stdset="0">
+        <string>browse-edit</string>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_browse">
+      <widget class="QToolButton" name="btn_browse">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="text">
-        <string>Browse</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icons/dark/browse.png</normaloff>:/icons/dark/browse.png</iconset>
+       </property>
+       <property name="-style-id" stdset="0">
+        <string>browse-btn</string>
        </property>
       </widget>
      </item>
     </layout>
    </item>
    <item>
-    <widget class="QLabel" name="_ignore_label_7">
-     <property name="text">
-      <string>Preview</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QFrame" name="_ignore_frame">
+    <widget class="QGroupBox" name="_ignore_group_box">
      <property name="styleSheet">
-      <string notr="true">#_ignore_frame{
-	border : 1px solid rgb(11, 134, 9);
-	border-radius : 5px
+      <string notr="true">#_ignore_group_box
+{
+     border-radius: 0px;
 }</string>
      </property>
+     <property name="title">
+      <string>Preview</string>
+     </property>
      <layout class="QVBoxLayout" name="verticalLayout">
-      <property name="leftMargin">
-       <number>4</number>
-      </property>
-      <property name="topMargin">
-       <number>4</number>
-      </property>
-      <property name="rightMargin">
-       <number>4</number>
-      </property>
-      <property name="bottomMargin">
-       <number>4</number>
-      </property>
       <item>
-       <layout class="QFormLayout" name="_ignore_form_layout">
-        <property name="labelAlignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       <widget class="QWidget" name="_ignore_widget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
-        <property name="formAlignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        <property name="styleSheet">
+         <string notr="true">QLabel { padding: 2px;}</string>
         </property>
-        <item row="0" column="1">
-         <widget class="QLabel" name="lb_table_name">
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color : green</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="_ignore_label_8">
-          <property name="text">
-           <string>Sorting Order  </string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLabel" name="lb_sorting_order">
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color : green</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="textFormat">
-           <enum>Qt::RichText</enum>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QLabel" name="_ignore_label">
-          <property name="text">
-           <string>Table Name </string>
-          </property>
-         </widget>
-        </item>
-       </layout>
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="2" column="0">
+          <widget class="QLabel" name="_ignore_label_5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Total Number Of Dependent Views</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="-style-draw-grid-line" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="_ignore_label_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Number Of Columns</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="-style-draw-grid-line" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLabel" name="lb_column_count">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="-style-grid-last-column" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="-style-draw-grid-line" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="_ignore_label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Table Name</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="-style-grid-first-row" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="-style-draw-grid-line" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="_ignore_label_4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Number Of Rows</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="-style-draw-grid-line" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="lb_table_name">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="-style-grid-first-row" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="-style-grid-last-column" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="-style-draw-grid-line" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="_ignore_label_8">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Sorting Order  </string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="-style-draw-grid-line" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLabel" name="lb_row_count">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="-style-grid-last-column" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="-style-draw-grid-line" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="lb_view_count">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="-style-grid-last-column" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="-style-draw-grid-line" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <layout class="QHBoxLayout" name="_ignore_horizontal_layout_1">
+           <item>
+            <widget class="QLabel" name="lb_sorting_order_icon">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="-style-draw-grid-line" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lb_sorting_order">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::PlainText</enum>
+             </property>
+             <property name="-style-grid-last-column" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="-style-grid-only-bottom-border" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="-style-grid-only-right-border" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
       </item>
       <item>
        <widget class="QLabel" name="_ignore_label_6">
+        <property name="styleSheet">
+         <string notr="true">padding-left: 5px;</string>
+        </property>
         <property name="text">
          <string>Columns Of This Table</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QTableView" name="table_view"/>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="_ignore_horizontal_layout_2">
-        <item>
-         <widget class="QLabel" name="_ignore_label_5">
-          <property name="text">
-           <string>Total Number Of Dependent Views</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="lb_view_count">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="_ignore_horizontal_layout_5">
-        <item>
-         <widget class="QLabel" name="_ignore_label_3">
-          <property name="text">
-           <string>Number Of Columns</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="lb_column_count">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="_ignore_label_4">
-          <property name="text">
-           <string>Number Of Rows</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="lb_row_count">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QTableView" name="table_view">
+        <property name="styleSheet">
+         <string notr="true">QHeaderView::section:horizontal
+{
+    height: 16px;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -215,6 +389,9 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">padding: 4px 8px 4px 8px;</string>
        </property>
        <property name="text">
         <string>Open</string>
@@ -249,8 +426,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>625</x>
-     <y>333</y>
+     <x>517</x>
+     <y>393</y>
     </hint>
     <hint type="destinationlabel">
      <x>342</x>

@@ -46,13 +46,17 @@ QueryDialog::QueryDialog(QList<K2QtTableModel*> models, QWidget *parent) :
 
     connect(m_ui->le_filter_expr, &LineEdit::focusGained, m_popup_editor, QOverload<>::of(&KmtFuncPopupEditor::popup));
     connect(m_popup_editor, &KmtFuncPopupEditor::textShouldBeSaved, m_ui->le_filter_expr, &LineEdit::setText);
-    connect(m_ui->cb_table_list, &QComboBox::currentIndexChanged, this, &QueryDialog::sourceTableChanged);
+    connect(m_ui->cb_table_list, &QComboBox::currentIndexChanged, this, &QueryDialog::updateNameListCB);
     connect(m_ui->btn_print, &QPushButton::clicked, this, &QueryDialog::printTable);
     connect(m_ui->btn_run_query, &QPushButton::clicked, this, &QueryDialog::runQuery);
     connect(m_ui->btn_as_view, &QPushButton::clicked,this, &QueryDialog::addAsView);
     connect(m_ui->btn_export_csv, &QPushButton::clicked, this, &QueryDialog::exportAsCSV);
     connect(m_ui->btn_export_text, &QPushButton::clicked, this, &QueryDialog::exportAsText);
 
+    // update the "sort with " column name combo box
+    connect(m_ui->le_column_names, &LineEdit::focusLost, this, [this]{
+        updateNameListCB(m_ui->cb_table_list->currentIndex());
+    });
 }
 
 QueryDialog::~QueryDialog()
@@ -61,7 +65,7 @@ QueryDialog::~QueryDialog()
     delete m_ui;
 }
 
-void QueryDialog::sourceTableChanged(int index)
+void QueryDialog::updateNameListCB(int index)
 {
     if(index < 1)
     {
@@ -104,6 +108,7 @@ void QueryDialog::exportAsText()
         if(!filename.isEmpty())
         {
             km::Printer printer(model->getAbsTable());
+            printer.printTableName(false);
             std::ofstream ofs(filename.toStdString());
             if(ofs.is_open())
             {

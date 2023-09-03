@@ -1,4 +1,3 @@
-#include "CustomErrMsgBox.hpp"
 #include "OpenTableDialog.hpp"
 #include "ui_OpenTableDialog.h"
 
@@ -10,6 +9,8 @@
 #include <kmt/TableIO.hpp>
 #include <kmt/ErrorHandler.hpp>
 
+#include "CustomErrMsgBox.hpp"
+#include "ThemeHandler.hpp"
 #include "rwview/TablePreview.hpp"
 #include "rwview/ViewReadWrite.hpp"
 
@@ -26,11 +27,11 @@ OpenTableDialog::OpenTableDialog(QWidget *parent) :
     m_table(nullptr)
 {
     m_ui->setupUi(this);
-    QFileSystemModel *model = new QFileSystemModel(this);
+    QFileSystemModel *model = new QFileSystemModel(m_ui->le_file_path);
     model->setReadOnly(true);
     model->setRootPath("D:");
     model->setOption(QFileSystemModel::DontWatchForChanges);
-    m_ui->le_file_path->setCompleter(new QCompleter(model,this));
+    m_ui->le_file_path->setCompleter(new QCompleter(model,m_ui->le_file_path));
     m_model = new QStandardItemModel(this);
     m_model->setColumnCount(3);
     m_model->setHorizontalHeaderLabels({tr("Name"), tr("Display Name"), tr("DataType")});
@@ -66,21 +67,24 @@ void OpenTableDialog::showPreview(const QString &file)
         m_ui->lb_row_count->setText(QString());
         m_ui->lb_column_count->setText(QString());
         m_ui->lb_sorting_order->setText(QString());
+        m_ui->lb_sorting_order_icon->setPixmap(QPixmap());
         m_model->setRowCount(0);
         return;
     }
 
 
     m_ui->lb_table_name->setText(K_SQ_STR(preview.getTableName()));
-    QString order_text = QLatin1String("<img src=\":/icons/%2.png\" width=\"%3\" height=\"%3\"></img>\t%1");
     int image_size = (m_ui->lb_sorting_order->font().pointSize() / 72.0)
             * qApp->primaryScreen()->physicalDotsPerInch();
     if(preview.getSortingOrder() == km::SortingOrder::ASCENDING)
     {
-        m_ui->lb_sorting_order->setText(order_text.arg(tr("Ascending")).arg("ascending").arg(image_size));
+        m_ui->lb_sorting_order->setText(tr("Ascending"));
+        m_ui->lb_sorting_order_icon->setPixmap(icons::getIcon("ascending").pixmap(QSize(image_size,image_size)));
     }
-    else{
-        m_ui->lb_sorting_order->setText(order_text.arg(tr("Descending")).arg("descending").arg(image_size));
+    else
+    {
+        m_ui->lb_sorting_order->setText(tr("Descending"));
+        m_ui->lb_sorting_order_icon->setPixmap(icons::getIcon("descending").pixmap(QSize(image_size,image_size)));
     }
 
     m_model->setRowCount(preview.getColumnCount());

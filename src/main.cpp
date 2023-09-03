@@ -4,17 +4,14 @@
 #include <QFile>
 
 #include <kmt/FunctionStore.hpp>
-#include "IconProvider.hpp"
+#include "ThemeHandler.hpp"
 #include "MainWindow.hpp"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    a.setStyle("Fusion");
-    //auto p = a.palette();
-    //p.setColor(QPalette::Highlight,QColor(29,111,66));
-    //a.setPalette(p);
+    theme::setTheme(theme::DARK,theme::GREEN);
     try{
         km::initAllFnc();
         MainWindow w;
