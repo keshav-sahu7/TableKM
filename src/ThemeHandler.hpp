@@ -2,6 +2,7 @@
 #define THEMEHANDLER_HPP
 
 #include <QIcon>
+#include <QDebug>
 #include "ThemeConsts.hpp"
 
 

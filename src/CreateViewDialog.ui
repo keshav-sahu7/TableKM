@@ -14,7 +14,7 @@
    <string>Create New View</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resource.qrc">
+   <iconset>
     <normaloff>:/icons/view.png</normaloff>:/icons/view.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -43,7 +43,7 @@
          <string>Ascending Order</string>
         </property>
         <property name="icon">
-         <iconset resource="resource.qrc">
+         <iconset>
           <normaloff>:/icons/ascending.png</normaloff>:/icons/ascending.png</iconset>
         </property>
        </item>
@@ -52,7 +52,7 @@
          <string>Descending Order</string>
         </property>
         <property name="icon">
-         <iconset resource="resource.qrc">
+         <iconset>
           <normaloff>:/icons/descending.png</normaloff>:/icons/descending.png</iconset>
         </property>
        </item>
@@ -176,7 +176,7 @@
           <string>Move Up     </string>
          </property>
          <property name="icon">
-          <iconset resource="resource.qrc">
+          <iconset>
            <normaloff>:/icons/arrow up.png</normaloff>:/icons/arrow up.png</iconset>
          </property>
         </widget>
@@ -193,8 +193,8 @@
           <string>Move Down</string>
          </property>
          <property name="icon">
-          <iconset resource="resource.qrc">
-           <normaloff>:/icons/arrow down.png</normaloff>:/icons/arrow down.png</iconset>
+          <iconset>
+           <normaloff>:/icons/arrow-down.png</normaloff>:/icons/arrow-down.png</iconset>
          </property>
         </widget>
        </item>
@@ -276,9 +276,7 @@
    <header>LineEdit.hpp</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="resource.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>_ignore_btn_cancel</sender>

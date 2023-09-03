@@ -16,7 +16,7 @@ void setTheme(ThemeType theme_type, ThemeName theme_name)
 {
     _theme_type = ThemeTypeAsString(theme_type);
     _theme_name = ThemeNameAsString(theme_name);
-    _theme_path = QString(":/icons/%1/%2/").arg(_theme_type, _theme_name);
+    _theme_path = QString(":/icons/%1/").arg(_theme_name);
 }
 
 

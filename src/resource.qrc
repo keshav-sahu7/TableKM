@@ -9,5 +9,38 @@
         <file>docs/style.css</file>
         <file>docs/type-conversion-function.html</file>
         <file>docs/welcome/welcome.html</file>
+        <file>icons/green/add.png</file>
+        <file>icons/green/add_column.png</file>
+        <file>icons/green/add_e.png</file>
+        <file>icons/green/arrow-down.png</file>
+        <file>icons/green/arrow-left.png</file>
+        <file>icons/green/arrow-right.png</file>
+        <file>icons/green/arrow-up.png</file>
+        <file>icons/green/ascending.png</file>
+        <file>icons/green/close-editor.png</file>
+        <file>icons/green/close.png</file>
+        <file>icons/green/delete.png</file>
+        <file>icons/green/descending.png</file>
+        <file>icons/green/details.png</file>
+        <file>icons/green/filter.png</file>
+        <file>icons/green/function.png</file>
+        <file>icons/green/home.png</file>
+        <file>icons/green/no image.png</file>
+        <file>icons/green/open.png</file>
+        <file>icons/green/redo.png</file>
+        <file>icons/green/remove.png</file>
+        <file>icons/green/remove_e.png</file>
+        <file>icons/green/right.png</file>
+        <file>icons/green/save.png</file>
+        <file>icons/green/search.png</file>
+        <file>icons/green/settings.png</file>
+        <file>icons/green/table.png</file>
+        <file>icons/green/transform.png</file>
+        <file>icons/green/trash.png</file>
+        <file>icons/green/undo.png</file>
+        <file>icons/green/view.png</file>
+        <file>icons/green/view2.png</file>
+        <file>icons/green/warning.png</file>
+        <file>icons/green/wrong.png</file>
     </qresource>
 </RCC>
