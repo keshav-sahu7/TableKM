@@ -15,5 +15,6 @@ inline km::KDateTime to_kdateTime(uint16_t year, uint8_t month, uint8_t day, uin
 
 km::Variant toKVariant(const QString &str, km::DataType data_type);
 QString toQString(const km::Variant &var);
+QString ToSentenceCase(const QString &str);
 
 #endif // MISCFUNCTIONS_HPP

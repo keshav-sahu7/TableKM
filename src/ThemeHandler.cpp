@@ -1,5 +1,8 @@
 #include "ThemeHandler.hpp"
 #include <QDebug>
+#include <QFile>
+#include <QApplication>
+#include "misc/MiscFunctions_.hpp"
 
 
 namespace theme
@@ -17,6 +20,14 @@ void setTheme(ThemeType theme_type, ThemeName theme_name)
     _theme_type = ThemeTypeAsString(theme_type);
     _theme_name = ThemeNameAsString(theme_name);
     _theme_path = QString(":/icons/%1/").arg(_theme_name);
+
+    QString fileName = QString(":/%1%2.qss").arg(ToSentenceCase(_theme_type), ToSentenceCase(_theme_name));
+    QFile file(fileName);
+    if(file.open(QFileDevice::Text | QFileDevice::ReadOnly))
+    {
+        qApp->setStyleSheet(file.readAll());
+        file.close();
+    }
 }
 
 

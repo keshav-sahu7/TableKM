@@ -73,3 +73,10 @@ QString toQString(const km::Variant &var)
     }
     return str;
 }
+
+QString ToSentenceCase(const QString &str)
+{
+    if(str.isEmpty())
+        return str;
+    return QString(str[0].toUpper()).append(str.right(str.length() - 1));
+}

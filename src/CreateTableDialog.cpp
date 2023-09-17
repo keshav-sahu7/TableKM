@@ -73,6 +73,7 @@ CreateTableDialog::CreateTableDialog(QWidget *parent) : QDialog(parent), m_table
     path_layout->addWidget(m_tspath);
 
     QToolButton *browse_path = new QToolButton(this);
+    //
     browse_path->setIcon(icons::getIcon("browse"));
     browse_path->setIconSize(QSize(16,16));
     browse_path->setProperty("-style-id","browse-btn");

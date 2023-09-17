@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     theme::setTheme(theme::DARK,theme::GREEN);
+
     try{
         km::initAllFnc();
         MainWindow w;
