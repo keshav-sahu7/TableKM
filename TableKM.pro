@@ -28,6 +28,7 @@ SOURCES += \
     src/TableInfoDialog.cpp \
     src/TableView.cpp \
     src/ThemeHandler.cpp \
+    src/Themehandler2.cpp \
     src/WelcomePage.cpp \
     src/datafmts/CellStyler.cpp \
     src/datafmts/ColorUtilities.cpp \
@@ -73,6 +74,7 @@ HEADERS += \
     src/TableView.hpp \
     src/ThemeConsts.hpp \
     src/ThemeHandler.hpp \
+    src/Themehandler2.hpp \
     src/WelcomePage.hpp \
     src/datafmts/CellStyler.hpp \
     src/datafmts/ColorUtilities.hpp \

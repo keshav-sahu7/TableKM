@@ -10,7 +10,7 @@
 #include <kmt/ErrorHandler.hpp>
 
 #include "CustomErrMsgBox.hpp"
-#include "ThemeHandler.hpp"
+#include "ThemeHandler2.hpp"
 #include "rwview/TablePreview.hpp"
 #include "rwview/ViewReadWrite.hpp"
 

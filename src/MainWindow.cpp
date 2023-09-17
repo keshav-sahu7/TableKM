@@ -10,7 +10,7 @@
 #include "K2QtTableModel.hpp"
 #include "AboutUs.hpp"
 #include "CreateTableDialog.hpp"
-#include "ThemeHandler.hpp"
+#include "ThemeHandler2.hpp"
 #include "manipulator/TableManipulator.hpp"
 #include "ProjectView.hpp"
 #include "CreateViewDialog.hpp"
