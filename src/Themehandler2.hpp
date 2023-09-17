@@ -90,7 +90,6 @@ namespace icons{
 inline QIcon getIcon(const char *icon_name)
 {
     auto iconPath = QString("%1/%2.png").arg(Theme::getThemePath(), icon_name);
-    qDebug() << iconPath << " icon path.";
     return QIcon(iconPath);
 }
 
