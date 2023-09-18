@@ -13,7 +13,7 @@
 #include "../KmtFuncPopupEditor.hpp"
 #include "../misc/SwitchLogHandlerHelper_.hpp"
 #include "../CustomErrMsgBox.hpp"
-#include "../ThemeHandler.hpp"
+#include "../ThemeHandler2.hpp"
 
 
 #define COLUMN_NAME 0

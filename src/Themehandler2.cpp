@@ -94,7 +94,7 @@ void Theme::setTheme(const QString &theme, const QString &flavour)
         instance.path = ":/icons/" + instance.flavour;
     }
 
-    QFile file(":/CustomStyleSheet.qss");
+    QFile file(":/CustomStylesheet.qss");
     if(file.open(QFile::ReadOnly))
     {
         auto custom_contents = QString::fromLatin1(file.readAll());
