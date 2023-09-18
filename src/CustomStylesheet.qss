@@ -72,3 +72,9 @@ QTableView QTableCornerButton::section
 {
     background-color: rgb(#FLAVOUR_COLOR);
 }
+
+#CustomErrMsgBox_m_msg
+{
+    border:none;
+    background-color:rgb(#WINDOW_COLOR);
+}
