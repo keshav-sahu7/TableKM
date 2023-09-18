@@ -56,7 +56,7 @@
        </property>
        <property name="icon">
         <iconset resource="resource.qrc">
-         <normaloff>:/icons/dark/browse.png</normaloff>:/icons/dark/browse.png</iconset>
+         <normaloff>:/icons/green/browse.png</normaloff>:/icons/green/browse.png</iconset>
        </property>
        <property name="-style-id" stdset="0">
         <string>browse-btn</string>

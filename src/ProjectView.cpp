@@ -1,7 +1,7 @@
 #include "ProjectView.hpp"
 
 #include "K2QtTableModel.hpp"
-#include "ThemeHandler.hpp"
+#include "ThemeHandler2.hpp"
 #include "MainWindow.hpp"
 #include "TableInfoDialog.hpp"
 #include "misc/KDefines.h"

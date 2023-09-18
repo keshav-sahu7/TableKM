@@ -15,7 +15,7 @@
 
 #include "KPairedLineEdit.hpp"
 #include "SyntaxHighlighter.hpp"
-#include "ThemeHandler.hpp"
+#include "ThemeHandler2.hpp"
 #include "CustomErrMsgBox.hpp"
 #include "misc/ValidatorFactory.hpp"
 #include "misc/KDefines.h"

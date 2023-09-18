@@ -6,7 +6,7 @@
 #include "../K2QtTableModel.hpp"
 #include "ManipulatorHelperFncs_.hpp"
 #include "../misc/KDefines.h"
-#include "../ThemeHandler.hpp"
+#include "../ThemeHandler2.hpp"
 #include <QComboBox>
 #include <QDateEdit>
 #include <QFormLayout>

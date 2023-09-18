@@ -42,5 +42,7 @@
         <file>icons/green/view2.png</file>
         <file>icons/green/warning.png</file>
         <file>icons/green/wrong.png</file>
+        <file>CustomStylesheet.qss</file>
+        <file>icons/green/browse.png</file>
     </qresource>
 </RCC>

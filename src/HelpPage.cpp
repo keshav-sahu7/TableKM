@@ -4,7 +4,7 @@
 #include <QCompleter>
 #include <QFile>
 
-#include "ThemeHandler.hpp"
+#include "ThemeHandler2.hpp"
 #include "misc/KDefines.h"
 
 QMap<std::string,std::string> HelpPage::map

@@ -1,0 +1,80 @@
+/* Browse directory buttons */
+QToolButton[-style-id="browse-btn"]
+{
+    padding: 2px 7px 2px 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(#FLAVOUR_COLOR);
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+QToolButton[-style-id="browse-btn"]:!hover
+{
+    background-color: rgb(#BASE_COLOR);
+}
+
+QToolButton[-style-id="browse-btn"]:hover
+{
+    border-color: rgb(#HOVER_COLOR);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+QLineEdit[-style-id="browse-edit"]
+{
+    border-right: none;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    padding-left: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+QWidget[-style-draw-grid-line="true"]
+{
+    border-left: 1px solid rgb(#BASE_COLOR);
+    border-bottom: 1px solid rgb(#BASE_COLOR);
+}
+
+QWidget[-style-draw-grid-line="true"][-style-grid-first-row="true"]
+{
+    border-top: 1px solid rgb(#BASE_COLOR);
+}
+
+QWidget[-style-draw-grid-line="true"][-style-grid-last-column="true"]
+{
+    border-right: 1px solid rgb(#BASE_COLOR);
+}
+
+QWidget[-style-grid-only-bottom-border="true"]
+{
+    border-bottom: 1px solid rgb(#BASE_COLOR);
+}
+
+QWidget[-style-grid-only-right-border="true"]
+{
+    border-right: 1px solid rgb(#BASE_COLOR);
+}
+
+QLabel[-style-draw-grid-line="true"]
+{
+    padding-left: 4px;
+}
+
+QTableView QWidget[-style-override-background="true"]
+{
+    background-color: rgb(#BASE_COLOR);
+}
+
+
+QTableView QTableCornerButton::section
+{
+    background-color: rgb(#FLAVOUR_COLOR);
+}
+
+#CustomErrMsgBox_m_msg
+{
+    border:none;
+    background-color:rgb(#WINDOW_COLOR);
+}

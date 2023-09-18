@@ -15,16 +15,6 @@ CustomErrMsgBox::CustomErrMsgBox(const QString &title, QWidget *parent)
     m_msg = new QTextEdit(this);
     m_msg->setObjectName("CustomErrMsgBox_m_msg");
 
-    // in case of light mode.
-    /*
-    m_msg->setFrameStyle(QFrame::NoFrame);
-    QPalette palette = m_msg->palette();
-    palette.setColor(QPalette::Base, this->palette().color(QPalette::Window));
-    m_msg->setPalette(palette);*/
-
-    // in case of dark mode.
-    m_msg->setStyleSheet("#CustomErrMsgBox_m_msg{border:none; background-color:rgb(59,59,59);}");
-
     // add highlighter
     auto hltr = SyntaxHighlighter::getKMTErrorHighlighter(this);
     hltr->setDocument(m_msg->document());

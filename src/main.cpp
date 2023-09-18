@@ -4,15 +4,14 @@
 #include <QFile>
 
 #include <kmt/FunctionStore.hpp>
-#include "ThemeHandler.hpp"
+#include "ThemeHandler2.hpp"
 #include "MainWindow.hpp"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    theme::setTheme(theme::DARK,theme::GREEN);
-
+    Theme::setTheme("dark","green");
     try{
         km::initAllFnc();
         MainWindow w;

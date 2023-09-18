@@ -17,7 +17,7 @@
 #include "DummyBasicView.hpp"
 #include "datafmts/CommonDataFormats.hpp"
 #include "rwview/ViewReadWrite.hpp"
-#include "ThemeHandler.hpp"
+#include "ThemeHandler2.hpp"
 #include "misc/KDefines.h"
 #include "misc/SwitchLogHandlerHelper_.hpp"
 
