@@ -15,7 +15,6 @@
 #include "TableView.hpp"
 #include "CustomErrMsgBox.hpp"
 #include "DummyBasicView.hpp"
-#include "datafmts/CommonDataFormats.hpp"
 #include "rwview/ViewReadWrite.hpp"
 #include "IconProvider.hpp"
 #include "misc/KDefines.h"

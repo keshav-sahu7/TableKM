@@ -1,8 +1,6 @@
 #ifndef K2QTTABLEMODEL_H
 #define K2QTTABLEMODEL_H
 
-#include <functional>
-
 #include <QAbstractTableModel>
 #include <QStandardItem>
 
@@ -10,7 +8,6 @@
 #include <kmt/Table.hpp>
 #include <kmt/BasicView.hpp>
 
-#include "datafmts/CommonDataFormats.hpp"
 #include "datafmts/CellStyler.hpp"
 #include "misc/KDefines.h"
 
