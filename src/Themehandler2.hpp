@@ -1,7 +1,6 @@
 #ifndef THEMEHANDLER_H
 #define THEMEHANDLER_H
 
-#include <cstring>
 
 #include <QIcon>
 #include <QStringView>

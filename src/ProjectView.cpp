@@ -1,12 +1,13 @@
 #include "ProjectView.hpp"
 
+#include <QHeaderView>
+#include <QMenu>
 #include "K2QtTableModel.hpp"
 #include "ThemeHandler2.hpp"
 #include "MainWindow.hpp"
 #include "TableInfoDialog.hpp"
 #include "misc/KDefines.h"
 
-#include <QHeaderView>
 
 
 
