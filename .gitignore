@@ -71,6 +71,9 @@ Thumbs.db
 *.dll
 *.exe
 
+# Visual studio files
+.vs
+
 # Qt creator files
 TableKM.pro.user
 CMakeLists.txt.user
