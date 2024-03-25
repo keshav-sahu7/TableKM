@@ -10,11 +10,11 @@ set(
 
     AboutUs.cpp
     CreateTableDialog.cpp
+    CreateViewDialog.cpp
     CustomErrMsgBox.cpp
     DockWidget.cpp
     DummyBasicView.cpp
     HelpPage.cpp
-    IconProvider.cpp
     K2QtTableModel.cpp
     KPairedLineEdit.cpp
     KmtFuncPopupEditor.cpp
@@ -26,7 +26,7 @@ set(
     SyntaxHighlighter.cpp
     TableInfoDialog.cpp
     TableView.cpp
-    ViewDialog.cpp
+    ThemeHandler2.cpp
     WelcomePage.cpp
     main.cpp
 )
@@ -36,11 +36,11 @@ set(
 
     AboutUs.hpp
     CreateTableDialog.hpp
+    CreateViewDialog.hpp
     CustomErrMsgBox.hpp
     DockWidget.hpp
     DummyBasicView.hpp
     HelpPage.hpp
-    IconProvider.hpp
     K2QtTableModel.hpp
     KPairedLineEdit.hpp
     KmtFuncPopupEditor.hpp
@@ -52,7 +52,7 @@ set(
     SyntaxHighlighter.hpp
     TableInfoDialog.hpp
     TableView.hpp
-    ViewDialog.hpp
+    ThemeHandler2.hpp
     WelcomePage.hpp
 
 )
@@ -61,12 +61,13 @@ set(
     UI_FILES
 
     AboutUs.ui
+    CreateViewDialog.ui
     HelpPage.ui
     MainWindow.ui
     OpenTableDialog.ui
     QueryDialog.ui
     TableInfoDialog.ui
-    ViewDialog.ui
+
 )
 
 set(
@@ -85,8 +86,8 @@ set(
 )
 
 set( KM_TABLE_LIB KMTableLib)
-if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-	if(${WIN32} AND EXISTS "${CMAKE_SOURCE_DIR}/KMTableLib/lib/libKMTableLib-d.dll.a")
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        if(WIN32 AND EXISTS "${CMAKE_SOURCE_DIR}/KMTableLib/lib/libKMTableLib-d.dll.a")
 		message(STATUS "Building with KMTableLib-d")
 		set( KM_TABLE_LIB KMTableLib-d)
 	endif()

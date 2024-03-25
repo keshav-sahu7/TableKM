@@ -1,19 +1,19 @@
 body {
-    font-size: large;
-}
+            font-size: large;
+        }
 
-.datatype {
-    color: blue;
-    font-weight: bold;
-    font-style: italic;
-}
 
-.function {
-    color: green;
-    font-weight: bold;
-}
+        .datatype {
+            color: rgb(84, 84, 226);
+            font-style: italic;
+        }
 
-.param {
-    color: grey;
-    font-weight: bold;
-}
+        .function {
+            color: green;
+            font-weight: bold;
+        }
+
+        .param {
+            color: grey;
+            font-weight: bold;
+        }

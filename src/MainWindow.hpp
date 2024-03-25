@@ -4,7 +4,6 @@
 
 #include <QMainWindow>
 #include <QMap>
-#include "DockWidget.hpp"
 #include <kmt/Table.hpp>
 
 class TableView;
@@ -76,4 +75,5 @@ inline ProjectView *MainWindow::getProjectView()
 {
     return m_project_view;
 }
+
 #endif // MAINWINDOW_H

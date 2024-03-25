@@ -15,12 +15,12 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QToolButton" name="btn_home">
        <property name="icon">
         <iconset resource="resource.qrc">
-         <normaloff>:/icons/home.png</normaloff>:/icons/home.png</iconset>
+         <normaloff>:/icons/light/home.png</normaloff>:/icons/light/home.png</iconset>
        </property>
       </widget>
      </item>
@@ -38,15 +38,51 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLineEdit" name="le_search_field"/>
-     </item>
-     <item>
-      <widget class="QToolButton" name="btn_search">
-       <property name="icon">
-        <iconset resource="resource.qrc">
-         <normaloff>:/icons/search.png</normaloff>:/icons/search.png</iconset>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
        </property>
-      </widget>
+       <item>
+        <widget class="QLineEdit" name="le_search_field">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit#le_search_field
+{
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-right: none;
+}</string>
+         </property>
+         <property name="-style-id" stdset="0">
+          <string>browse-edit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="btn_search">
+         <property name="styleSheet">
+          <string notr="true">QToolButton#btn_search
+{
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-left: none;
+}</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/icons/light/search.png</normaloff>:/icons/light/search.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>13</width>
+           <height>13</height>
+          </size>
+         </property>
+         <property name="-style-id" stdset="0">
+          <string>browse-btn</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </item>

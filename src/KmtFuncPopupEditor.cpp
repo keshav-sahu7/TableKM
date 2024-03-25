@@ -21,7 +21,7 @@ KmtFuncPopupEditor::KmtFuncPopupEditor(QWidget *parent)
 {
     assert(parent);
 
-    setFrameStyle(QFrame::StyledPanel | QFrame::Raised);
+    setFrameStyle(QFrame::WinPanel | QFrame::Raised);
     setLineWidth(3);
     setMidLineWidth(3);
     m_editor = new QPlainTextEdit(this);
@@ -126,7 +126,7 @@ void KmtFuncPopupEditor::setAbsTable(const km::AbstractTable *table, km::DataTyp
         font.setBold(true);
         m_error->setFont(font);
         m_error->setWordWrap(true);
-        m_error->setStyleSheet("background-color : rgb(192,192,192);");
+        m_error->setStyleSheet("background-color : rgb(192,192,192); color: rgb(35,35,35);");
         auto fm = m_error->fontMetrics();
         int ht = fm.height() * 2 + fm.lineSpacing();
         m_error->setFixedHeight(ht);

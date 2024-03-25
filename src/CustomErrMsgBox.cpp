@@ -13,6 +13,7 @@ CustomErrMsgBox::CustomErrMsgBox(const QString &title, QWidget *parent)
     setWindowIcon(style()->standardIcon(QStyle::SP_MessageBoxCritical));
     setWindowTitle(title);
     m_msg = new QTextEdit(this);
+    m_msg->setObjectName("CustomErrMsgBox_m_msg");
 
     // add highlighter
     auto hltr = SyntaxHighlighter::getKMTErrorHighlighter(this);
@@ -22,15 +23,11 @@ CustomErrMsgBox::CustomErrMsgBox(const QString &title, QWidget *parent)
     m_msg->setReadOnly(true);
     m_msg->setWordWrapMode(QTextOption::WordWrap);
 
-//     set background color
-    QPalette palette = m_msg->palette();
-    palette.setColor(QPalette::Base, this->palette().color(QPalette::Window));
-    m_msg->setPalette(palette);
-
     // add to layout and set it to this dialog.
     QHBoxLayout *layout_btn = new QHBoxLayout();
     layout_btn->addStretch();
     QPushButton *btn_ok = new QPushButton(tr("Ok"),this);
+    btn_ok->setStyleSheet("min-width: 40px;");
     connect(btn_ok, &QPushButton::clicked, this, &CustomErrMsgBox::accept);
     layout_btn->addWidget(btn_ok);
 

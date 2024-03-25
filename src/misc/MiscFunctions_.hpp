@@ -3,7 +3,7 @@
 #include <QString>
 #include <kmt/Core.hpp>
 
-inline km::KDate to_kdate(uint8_t year, uint8_t month, uint8_t day)
+inline km::KDate to_kdate(uint16_t year, uint8_t month, uint8_t day)
 {
     return km::KDate{year,month,day};
 }
@@ -15,5 +15,6 @@ inline km::KDateTime to_kdateTime(uint16_t year, uint8_t month, uint8_t day, uin
 
 km::Variant toKVariant(const QString &str, km::DataType data_type);
 QString toQString(const km::Variant &var);
+QString ToSentenceCase(const QString &str);
 
 #endif // MISCFUNCTIONS_HPP
