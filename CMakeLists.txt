@@ -25,6 +25,10 @@ find_package(Qt6 COMPONENTS PrintSupport REQUIRED)
 include_directories(${CMAKE_SOURCE_DIR}/KMTableLib/include   ${Qt6Widgets_INCLUDE_DIRS}   src)
 link_directories(${CMAKE_SOURCE_DIR}/KMTableLib/lib)
 
+set (EXTERNAL_THEME_RESOURCE
+    ${CMAKE_SOURCE_DIR}/themes/dark/external_theme.qrc
+)
+
 set(
     K_BUILD_DIR
     ${CMAKE_BUILD_TYPE}

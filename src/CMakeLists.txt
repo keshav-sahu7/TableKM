@@ -74,6 +74,7 @@ set(
     QRC_FILES
 
     resource.qrc
+    ${EXTERNAL_THEME_RESOURCE}
 )
 
 set(
