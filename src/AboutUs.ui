@@ -18,7 +18,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="_ignore_label">
+    <widget class="QLabel" name="lb_title">
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:700; font-style:italic; color:#61de0d;&quot;&gt;TableKM&lt;/span&gt;&lt;span style=&quot; font-size:22pt; font-weight:700; font-style:italic; color:#61de0d; vertical-align:super;&quot;&gt;v1.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>

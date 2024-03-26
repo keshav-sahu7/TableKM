@@ -4,6 +4,17 @@ project(TableKM VERSION 1.0 LANGUAGES CXX)
 set(LANGUAGE CXX)
 set(CXX_STANDARD_REQUIRED 17)
 
+# Set version numbers
+set(PROJECT_VERSION_MAJOR 1)
+set(PROJECT_VERSION_MINOR 1)
+set(PROJECT_VERSION_PATCH 0)
+
+
+configure_file(
+    "${PROJECT_SOURCE_DIR}/config.h.in"
+    "${PROJECT_BINARY_DIR}/config/config.h"
+)
+
 if(CMAKE_COMPILER_IS_GNUCXX)
     message(STATUS "GCC detected, adding compile flags")
     add_compile_options(-Wall -Wextra -Wpedantic)
@@ -22,7 +33,13 @@ find_package(Qt6 COMPONENTS Widgets REQUIRED)
 find_package(Qt6 COMPONENTS PrintSupport REQUIRED)
 
 # src is included so that automatically generated ui_*.h files can include these headers.
-include_directories(${CMAKE_SOURCE_DIR}/KMTableLib/include   ${Qt6Widgets_INCLUDE_DIRS}   src)
+include_directories(
+    ${CMAKE_SOURCE_DIR}/KMTableLib/include
+    ${Qt6Widgets_INCLUDE_DIRS}
+    src
+    ${PROJECT_BINARY_DIR}/config
+)
+
 link_directories(${CMAKE_SOURCE_DIR}/KMTableLib/lib)
 
 set (EXTERNAL_THEME_RESOURCE
