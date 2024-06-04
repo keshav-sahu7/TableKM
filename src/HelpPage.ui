@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>565</width>
-    <height>347</height>
+    <width>846</width>
+    <height>478</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,13 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
      <item>
       <widget class="QToolButton" name="btn_home">
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/light/home.png</normaloff>:/icons/light/home.png</iconset>
        </property>
       </widget>
@@ -38,51 +41,50 @@
       </spacer>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <property name="spacing">
-        <number>0</number>
+      <widget class="QLineEdit" name="le_search_field">
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>16777215</height>
+        </size>
        </property>
-       <item>
-        <widget class="QLineEdit" name="le_search_field">
-         <property name="styleSheet">
-          <string notr="true">QLineEdit#le_search_field
+       <property name="styleSheet">
+        <string notr="true">QLineEdit#le_search_field
 {
     border-top-left-radius: 10%;
     border-bottom-left-radius: 10%;
     border-right: none;
 }</string>
-         </property>
-         <property name="-style-id" stdset="0">
-          <string>browse-edit</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QToolButton" name="btn_search">
-         <property name="styleSheet">
-          <string notr="true">QToolButton#btn_search
+       </property>
+       <property name="-style-id" stdset="0">
+        <string>browse-edit</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btn_search">
+       <property name="styleSheet">
+        <string notr="true">QToolButton#btn_search
 {
     border-top-right-radius: 10%;
     border-bottom-right-radius: 10%;
     border-left: none;
 }</string>
-         </property>
-         <property name="icon">
-          <iconset resource="resource.qrc">
-           <normaloff>:/icons/light/search.png</normaloff>:/icons/light/search.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>13</width>
-           <height>13</height>
-          </size>
-         </property>
-         <property name="-style-id" stdset="0">
-          <string>browse-btn</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/icons/light/search.png</normaloff>:/icons/light/search.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>13</width>
+         <height>13</height>
+        </size>
+       </property>
+       <property name="-style-id" stdset="0">
+        <string>browse-btn</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -92,6 +94,9 @@
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
@@ -99,8 +104,6 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="resource.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
