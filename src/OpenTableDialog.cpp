@@ -64,6 +64,7 @@ void OpenTableDialog::showPreview(const QString &file)
     if(!preview.isValid())
     {
         m_ui->lb_table_name->setText(QString());
+        m_ui->btn_open->setEnabled(false);
         m_ui->lb_row_count->setText(QString());
         m_ui->lb_column_count->setText(QString());
         m_ui->lb_sorting_order->setText(QString());
@@ -107,6 +108,7 @@ void OpenTableDialog::showPreview(const QString &file)
     m_ui->lb_row_count->setText(QString::number(preview.getRowCount()));
     m_ui->lb_column_count->setText(QString::number(preview.getColumnCount()));
 
+    m_ui->btn_open->setEnabled(true);
 
     QFile f(QFileInfo(file).path() + "/Views.xml");
     if(f.open(QFile::ReadOnly))

@@ -384,6 +384,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="btn_open">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
          <horstretch>0</horstretch>
