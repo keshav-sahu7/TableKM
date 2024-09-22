@@ -49,7 +49,7 @@ QString asHexadecimalUpperI64(const km::Variant &v, const QString &prefix)
 
 QString asMoneyI64(const km::Variant &v)
 {
-    return QLocale::system().toCurrencyString(v.asInt64());
+    return QLocale::system().toCurrencyString((qlonglong)v.asInt64());
 }
 
 

@@ -1,5 +1,6 @@
 #include "Kmx.hpp"
 
+#include <cstdint>
 #include <stack>
 #include <algorithm>
 

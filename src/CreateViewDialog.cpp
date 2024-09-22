@@ -1,4 +1,5 @@
 #include "CreateViewDialog.hpp"
+#include "kmt/ErrorHandler.hpp"
 #include "ui_CreateViewDialog.h"
 
 #include <QCheckBox>

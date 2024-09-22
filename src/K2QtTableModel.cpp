@@ -465,7 +465,7 @@ QVariant K2QtTableModel::qtVariantFrom(const km::Variant &data) const
     case km::DataType::INT32:
         return data.asInt32();
     case km::DataType::INT64:
-        return data.asInt64();
+        return (qlonglong)data.asInt64();
     case km::DataType::FLOAT32:
         return QVariant(data.asFloat32());
     case km::DataType::FLOAT64:

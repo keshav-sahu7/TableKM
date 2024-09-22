@@ -6,7 +6,6 @@
 #include <QStringView>
 #include <QStyle>
 
-#include "misc/KDefines.h"
 
 inline namespace {
 

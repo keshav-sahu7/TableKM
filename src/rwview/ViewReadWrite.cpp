@@ -3,13 +3,14 @@
 #include <fstream>
 #include <QDebug>
 
-#include "kmx.hpp"
+#include "Kmx.hpp"
 
 #include <kmt/BasicView.hpp>
 #include <kmt/LogMsg.hpp>
 
 #include "../DummyBasicView.hpp"
 #include "../misc/KDefines.h"
+#include "kmt/ErrorHandler.hpp"
 
 using SOdr = km::SortingOrder;
 using km::err::LogMsg;
