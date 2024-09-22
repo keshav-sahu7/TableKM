@@ -11,7 +11,6 @@
         <file>docs/welcome/welcome.html</file>
         <file>icons/green/add.png</file>
         <file>icons/green/add_column.png</file>
-        <file>icons/green/add_e.png</file>
         <file>icons/green/arrow-down.png</file>
         <file>icons/green/arrow-left.png</file>
         <file>icons/green/arrow-right.png</file>
@@ -29,7 +28,6 @@
         <file>icons/green/open.png</file>
         <file>icons/green/redo.png</file>
         <file>icons/green/remove.png</file>
-        <file>icons/green/remove_e.png</file>
         <file>icons/green/right.png</file>
         <file>icons/green/save.png</file>
         <file>icons/green/search.png</file>
