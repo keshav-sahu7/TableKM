@@ -6,11 +6,10 @@
 
 void SyntaxHighlighter::highlightBlock(const QString &text)
 {
-    int n = 0;
     for(const auto &rule : m_highlighting_rules)
     {
         QRegularExpressionMatchIterator i = rule.expression.globalMatch(text);
-        n = rule.captured_group ? 1 : 0;
+        int n = rule.captured_group ? 1 : 0;
         while (i.hasNext()) {
             QRegularExpressionMatch match = i.next();
             setFormat(match.capturedStart(n), match.capturedLength(n), rule.format);
