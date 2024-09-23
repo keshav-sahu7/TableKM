@@ -60,6 +60,7 @@ SyntaxHighlighter *SyntaxHighlighter::getKMTExpressionHighlighter(QObject *paren
     par_comma_rule.expression.setPattern("[\\(\\),]");
     highlighter->addHighlightingRule(par_comma_rule);
 
+    // orders are set intensionaly
     std::tuple <const char* /*Expression*/, QBrush /*Forground*/, bool /*bold*/, bool /*italic*/> highlighting_rules[] = {
         {"\\-?\\d+",Qt::darkMagenta, true, false},                      //int32
         {"\\-?\\d+(l|L)?",Qt::darkMagenta, true, false},                //int64
@@ -67,7 +68,7 @@ SyntaxHighlighter *SyntaxHighlighter::getKMTExpressionHighlighter(QObject *paren
         {"\\-?\\d+\\.(\\d+)?",Qt::darkMagenta, true, false},            //float64
         {"\"[^\"]*\"",Qt::darkGreen, false, false},                     //string
         {"(True)|(False)",Qt::darkMagenta, true, false},                //boolean
-        {"\\$[[:alpha:]_]\\w*",Qt::darkBlue, true, true},         //column
+        {"\\$[[:alpha:]_]\\w*",Qt::yellow, false, true},                //column
     };
 
 
