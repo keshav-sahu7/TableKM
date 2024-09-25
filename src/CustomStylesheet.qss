@@ -1,7 +1,7 @@
 /* Browse directory buttons */
 QToolButton[-style-id="browse-btn"]
 {
-    padding: 2px 7px 2px 5px;
+    padding: 3px 5px 3px 5px;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(#FLAVOUR_COLOR);
@@ -27,8 +27,18 @@ QLineEdit[-style-id="browse-edit"]
     border-top-left-radius: 0%;
     border-bottom-left-radius: 0%;
     padding-left: 5px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+}
+
+/*Used in HelpPage.ui*/
+QToolButton#btn_search
+{
+    border-left: none;
+}
+
+/*Used in HelpPage.ui*/
+QLineEdit#le_search_field
+{
+    border-right: none;
 }
 
 QWidget[-style-draw-grid-line="true"]
