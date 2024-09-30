@@ -17,7 +17,6 @@
 #include "TableView.hpp"
 #include "K2QtTableModel.hpp"
 #include "misc/KDefines.h"
-#include "SyntaxHighlighter.hpp"
 
 #include "misc/SwitchLogHandlerHelper_.hpp"
 
@@ -215,22 +214,23 @@ void QueryDialog::runQuery()
         error = K_SQ_STR(str);
     });
     try{
-        std::vector<std::string> vec;
+        std::vector<std::string> column_list;
         QStringList user_list = m_ui->le_column_names->text().split(',');
         for(const auto &val : user_list)
         {
-            vec.push_back(val.trimmed().toStdString());
+            column_list.push_back(val.trimmed().toStdString());
         }
 
         K2QtTableModel *source_model = m_ui->cb_table_list->currentData().value<K2QtTableModel*>();
+
         km::BasicView *view = new km::BasicView(
-                    "__query-runner",
-                    source_model->getAbsTable(),
-                    vec,
-                    m_ui->le_filter_expr->text().toStdString(),
-                    m_ui->cb_sort_by->currentText().toStdString(),
-                    static_cast<km::SortingOrder>(m_ui->cb_sorting_order->currentIndex())
-                    );
+            "__query-runner",
+            source_model->getAbsTable(),
+            column_list,
+            m_ui->le_filter_expr->text().toStdString(),
+            m_ui->cb_sort_by->currentText().toStdString(),
+            static_cast<km::SortingOrder>(m_ui->cb_sorting_order->currentIndex()));
+
         K2QtTableModel *model = new K2QtTableModel(view,source_model->getPath(),nullptr);
         K2QtTableModel *old_model = m_table_view->getK2QtModel();
         m_table_view->setModel(model);
