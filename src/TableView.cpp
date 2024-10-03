@@ -7,7 +7,6 @@
 
 #include "K2QtTableModel.hpp"
 #include "ThemeHandler2.hpp"
-#include "datafmts/CommonDataFormats.hpp"
 #include "datafmts/ColorUtilities.hpp"
 
 #include "delegates/Delegates.hpp"

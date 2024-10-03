@@ -115,7 +115,7 @@
            <item>
             <widget class="QLabel" name="_ignore_label_4">
              <property name="text">
-              <string>FROM TABLE </string>
+              <string>FROM </string>
              </property>
             </widget>
            </item>
