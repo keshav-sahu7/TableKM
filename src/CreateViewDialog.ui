@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>506</width>
-    <height>340</height>
+    <width>735</width>
+    <height>559</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -165,64 +165,9 @@
      <item>
       <layout class="QVBoxLayout" name="_ignore_vertical_layout">
        <item>
-        <widget class="QPushButton" name="btn_move_up">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>Move Up     </string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>:/icons/arrow up.png</normaloff>:/icons/arrow up.png</iconset>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_move_down">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>Move Down</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>:/icons/arrow-down.png</normaloff>:/icons/arrow-down.png</iconset>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_select_all">
-         <property name="text">
-          <string>Select All</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_deselect_all">
-         <property name="text">
-          <string>Deselect All</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_invert_selection">
-         <property name="text">
-          <string>Invert Selection</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <spacer name="_ignore_vertical_spacer">
          <property name="orientation">
-          <enum>Qt::Vertical</enum>
+          <enum>Qt::Orientation::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -237,11 +182,86 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QToolButton" name="btn_move_down">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Move Down</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/icons/arrow-down.png</normaloff>:/icons/arrow-down.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btn_move_up">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Move Up     </string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/icons/arrow up.png</normaloff>:/icons/arrow up.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btn_select_all">
+       <property name="text">
+        <string>Select All</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btn_deselect_all">
+       <property name="text">
+        <string>Deselect All</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btn_invert_selection">
+       <property name="text">
+        <string>Invert Selection</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="_ignore_horizontal_layout">
      <item>
       <spacer name="_ignore_horizontal_spacer">
        <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+        <enum>Qt::Orientation::Horizontal</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>

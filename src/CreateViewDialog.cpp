@@ -63,10 +63,10 @@
     connect(m_ui->le_formula, &LineEdit::focusGained, this, &CreateViewDialog::popupEditor);
     connect(m_popup_editor, &KmtFuncPopupEditor::popupHidden, this, &CreateViewDialog::popupEditorLostFocus);
     connect(m_ui->btn_move_up, &QPushButton::clicked, this, &CreateViewDialog::columnMoveUp);
-    connect(m_ui->btn_move_down, &QPushButton::clicked, this, &CreateViewDialog::columnMoveDown);
-    connect(m_ui->btn_select_all, &QPushButton::clicked, this, &CreateViewDialog::selectAll);
-    connect(m_ui->btn_deselect_all, &QPushButton::clicked, this, &CreateViewDialog::deselectAll);
-    connect(m_ui->btn_invert_selection, &QPushButton::clicked, this, &CreateViewDialog::invertSelections);
+    connect(m_ui->btn_move_down, &QToolButton::clicked, this, &CreateViewDialog::columnMoveDown);
+    connect(m_ui->btn_select_all, &QToolButton::clicked, this, &CreateViewDialog::selectAll);
+    connect(m_ui->btn_deselect_all, &QToolButton::clicked, this, &CreateViewDialog::deselectAll);
+    connect(m_ui->btn_invert_selection, &QToolButton::clicked, this, &CreateViewDialog::invertSelections);
     connect(m_ui->btn_create_view, &QPushButton::clicked, this, &CreateViewDialog::createView);
 }
 
