@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>469</width>
-    <height>337</height>
+    <width>689</width>
+    <height>429</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,6 +18,16 @@
     <normaloff>:/icons/table.png</normaloff>:/icons/table.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Table Info</string>
+     </property>
+     <property name="-style-horizontal-label" stdset="0">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
    <item>
     <layout class="QGridLayout" name="_ignore_grid_layout">
      <property name="topMargin">
@@ -233,8 +243,14 @@
    </item>
    <item>
     <widget class="QLabel" name="_ignore_label_6">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="text">
       <string>Columns</string>
+     </property>
+     <property name="-style-horizontal-label" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
