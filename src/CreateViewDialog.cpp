@@ -17,8 +17,10 @@
         obj1->set(obj2->get());\
         obj2->set(tmp);\
 }\
+ \
 
-    CreateViewDialog::CreateViewDialog(km::AbstractTable *source, QWidget *parent) :
+
+CreateViewDialog::CreateViewDialog(km::AbstractTable *source, QWidget *parent) :
     QDialog(parent),
     m_ui(new Ui::ViewDialog),
     m_view(nullptr),
@@ -35,21 +37,17 @@
     {
         const km::ColumnMetaData &column = m_source->getColumnMetaData(i);
 
-        QCheckBox *selected = new QCheckBox();
+        QCheckBox *selected = new QCheckBox(K_SQ_STR(column.column_name));
         selected->setChecked(true);
         m_ui->table_widget->setCellWidget(i,0,selected);
 
-        QTableWidgetItem *name = new QTableWidgetItem(K_SQ_STR(column.column_name));
-        name->setFlags(name->flags() & ~Qt::ItemIsEditable);
-        m_ui->table_widget->setItem(i,1,name);
-
         QTableWidgetItem *data_type = new QTableWidgetItem(K_SQ_STR(km::dataTypeToString(column.data_type)));
         data_type->setFlags(data_type->flags() & ~Qt::ItemIsEditable);
-        m_ui->table_widget->setItem(i,2,data_type);
+        m_ui->table_widget->setItem(i,1,data_type);
 
         QTableWidgetItem *display_name = new QTableWidgetItem(K_SQ_STR(column.display_name));
         display_name->setFlags(display_name->flags() & ~Qt::ItemIsEditable);
-        m_ui->table_widget->setItem(i,3,display_name);
+        m_ui->table_widget->setItem(i,2,display_name);
 
         //add to combobox of "sort by" option.
         m_ui->cb_sort_by->addItem(K_SQ_STR(column.column_name));
@@ -139,8 +137,9 @@ void CreateViewDialog::createView()
     std::vector<std::string> columns;
     for(int i = 0, count = m_ui->table_widget->rowCount(); i < count; ++i)
     {
-        if(dynamic_cast<QCheckBox*>(m_ui->table_widget->cellWidget(i,0))->isChecked())
-            columns.push_back(m_ui->table_widget->item(i,1)->text().toStdString());
+        auto cbColumnName = dynamic_cast<QCheckBox*>(m_ui->table_widget->cellWidget(i,0));
+        if(cbColumnName && cbColumnName->isChecked())
+            columns.push_back(cbColumnName->text().toStdString());
     }
     const std::string exp = m_ui->le_formula->text().toStdString();
     const std::string sort_by = m_ui->cb_sort_by->currentText().toStdString();
@@ -185,6 +184,7 @@ void CreateViewDialog::swapRows(int i1, int i2)
     QCheckBox *selected_2 = dynamic_cast<QCheckBox*>(m_ui->table_widget->cellWidget(i2,0));
 
     K_SWAP_DATA(selected_1,selected_2,setChecked, isChecked);
+    K_SWAP_DATA(selected_1,selected_2,setText, text);
 
 
     for(int c = 1; c < 3; ++c)

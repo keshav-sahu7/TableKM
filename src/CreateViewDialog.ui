@@ -20,8 +20,8 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="_ignore_grid_layout">
-     <item row="2" column="0">
-      <widget class="QLabel" name="_ignore_label_3">
+     <item row="1" column="0">
+      <widget class="QLabel" name="_ignore_label">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
          <horstretch>0</horstretch>
@@ -29,14 +29,17 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>Filter With</string>
+        <string>View Of</string>
        </property>
       </widget>
+     </item>
+     <item row="0" column="1" colspan="4">
+      <widget class="QLineEdit" name="le_view_name"/>
      </item>
      <item row="3" column="1">
       <widget class="QComboBox" name="cb_sort_by"/>
      </item>
-     <item row="3" column="3">
+     <item row="3" column="4">
       <widget class="QComboBox" name="cb_sorting_order">
        <item>
         <property name="text">
@@ -56,6 +59,39 @@
           <normaloff>:/icons/descending.png</normaloff>:/icons/descending.png</iconset>
         </property>
        </item>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="4">
+      <widget class="QLabel" name="lb_source">
+       <property name="text">
+        <string>Table [ Source Table Name ]</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="_ignore_label_6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Sorting Order</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="_ignore_label_3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Filter With</string>
+       </property>
       </widget>
      </item>
      <item row="3" column="0">
@@ -84,48 +120,25 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1" colspan="3">
-      <widget class="QLabel" name="lb_source">
-       <property name="text">
-        <string>Table [ Source Table Name ]</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1" colspan="3">
-      <widget class="QLineEdit" name="le_view_name"/>
-     </item>
-     <item row="3" column="2">
-      <widget class="QLabel" name="_ignore_label_6">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Sorting Order</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="_ignore_label">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>View Of</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1" colspan="3">
+     <item row="2" column="1" colspan="4">
       <widget class="LineEdit" name="le_formula">
        <property name="placeholderText">
         <string>Leave it empty to select all.</string>
        </property>
       </widget>
+     </item>
+     <item row="3" column="2">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>
@@ -140,11 +153,6 @@
     <layout class="QHBoxLayout" name="_ignore_horizontal_layout_2">
      <item>
       <widget class="QTableWidget" name="table_widget">
-       <column>
-        <property name="text">
-         <string>Selected</string>
-        </property>
-       </column>
        <column>
         <property name="text">
          <string>Name</string>
