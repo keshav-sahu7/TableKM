@@ -1195,22 +1195,15 @@ QDockWidget::title:disabled
     background: rgb(110,110,110);
 }
 
-QDockWidget::close-button, QDockWidget::float-button
-{
-    icon-size: 10px;
-}
-
 /*
     If below dockwidget code is not working then comment them for the default behaviour
 */
 QDockWidget::close-button:hover:!pressed, QDockWidget::float-button:hover:!pressed
 {
-    icon-size: 12px;
     background-color: rgb( 0, 0, 223);
 }
 
 QDockWidget::close-button:pressed, QDockWidget::float-button:pressed
 {
-    icon-size: 10px;
     background-color: rgb( 0, 0, 223);
 }
