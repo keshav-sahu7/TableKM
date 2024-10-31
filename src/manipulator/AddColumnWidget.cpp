@@ -7,7 +7,6 @@
 
 #include "../KmtFuncPopupEditor.hpp"
 #include "../LineEdit.hpp"
-#include "../SyntaxHighlighter.hpp"
 #include "../K2QtTableModel.hpp"
 #include "../misc/KDefines.h"
 

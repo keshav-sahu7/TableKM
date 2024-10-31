@@ -7,7 +7,6 @@
 #include <QToolTip>
 
 #include "../misc/ValidatorFactory.hpp"
-#include "../misc/KDefines.h"
 #include "../misc/MiscFunctions_.hpp"
 
 
