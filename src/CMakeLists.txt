@@ -12,11 +12,13 @@ set(
     CreateTableDialog.cpp
     CreateViewDialog.cpp
     CustomErrMsgBox.cpp
+    CustomTextEdit.cpp
     DockWidget.cpp
     DummyBasicView.cpp
     HelpPage.cpp
     K2QtTableModel.cpp
     KPairedLineEdit.cpp
+    KmtFuncCompleterModel.cpp
     KmtFuncPopupEditor.cpp
     LineEdit.cpp
     MainWindow.cpp
@@ -38,11 +40,13 @@ set(
     CreateTableDialog.hpp
     CreateViewDialog.hpp
     CustomErrMsgBox.hpp
+    CustomTextEdit.hpp
     DockWidget.hpp
     DummyBasicView.hpp
     HelpPage.hpp
     K2QtTableModel.hpp
     KPairedLineEdit.hpp
+    KmtFuncCompleterModel.hpp
     KmtFuncPopupEditor.hpp
     LineEdit.hpp
     MainWindow.hpp

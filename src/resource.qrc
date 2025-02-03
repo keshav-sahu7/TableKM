@@ -42,5 +42,6 @@
         <file>icons/green/wrong.png</file>
         <file>CustomStylesheet.qss</file>
         <file>icons/green/browse.png</file>
+        <file>function-list.txt</file>
     </qresource>
 </RCC>

@@ -1,12 +1,27 @@
 #include "KmtFuncPopupEditor.hpp"
-#include "LineEdit.hpp"
 
 #include <QApplication>
 #include <QTimer>
+#include <QCompleter>
 
 #include "SyntaxHighlighter.hpp"
 #include "misc/KDefines.h"
 #include "misc/SwitchLogHandlerHelper_.hpp"
+
+
+namespace
+{
+static QStringList GetColumnNamesFromTable(const km::AbstractTable *table)
+{
+    QStringList list;
+    for (km::IndexType i = 0; i < table->columnCount(); ++i)
+    {
+        list << QString::fromStdString(table->getColumnMetaData(i).column_name);
+    }
+
+    return list;
+}
+}
 
 
 KmtFuncPopupEditor::KmtFuncPopupEditor(QWidget *parent)
@@ -24,7 +39,7 @@ KmtFuncPopupEditor::KmtFuncPopupEditor(QWidget *parent)
     setFrameStyle(QFrame::WinPanel | QFrame::Raised);
     setLineWidth(3);
     setMidLineWidth(3);
-    m_editor = new QPlainTextEdit(this);
+    m_editor = new CustomTextEdit(this);
 
     m_editor->setWordWrapMode(QTextOption::WordWrap);
     SyntaxHighlighter *highlighter = SyntaxHighlighter::getKMTExpressionHighlighter(this);
@@ -38,6 +53,7 @@ KmtFuncPopupEditor::KmtFuncPopupEditor(QWidget *parent)
 
     setLayout(m_main_layout);
 
+    setCompleter();
     hide();
 }
 
@@ -132,6 +148,8 @@ void KmtFuncPopupEditor::setAbsTable(const km::AbstractTable *table, km::DataTyp
         m_error->setFixedHeight(ht);
         m_main_layout->addWidget(m_error);
 
+        m_completer_model->setColumnNames(GetColumnNamesFromTable(m_table));
+
         m_timer = new QTimer(this);
         m_timer->setInterval(1000);
         connect(m_timer, &QTimer::timeout, this, &KmtFuncPopupEditor::checkFormula);
@@ -187,4 +205,15 @@ void KmtFuncPopupEditor::ignoreEventsOf(const QWidgetList &list)
 {
     for(auto w : list)
         w->removeEventFilter(this);
+}
+
+void KmtFuncPopupEditor::setCompleter()
+{
+    m_completer_model = new KmtFuncCompleterModel(this);
+    auto completer = new QCompleter(this);
+    completer->setModel(m_completer_model);
+    completer->setModelSorting(QCompleter::UnsortedModel);
+    completer->setCaseSensitivity(Qt::CaseInsensitive);
+    completer->setWrapAround(false);
+    m_editor->setCompleter(completer);
 }

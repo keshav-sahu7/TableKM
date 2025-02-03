@@ -1,11 +1,14 @@
 #ifndef KMTFUNCPOPUPEDITOR_HPP
 #define KMTFUNCPOPUPEDITOR_HPP
 
+#include "CustomTextEdit.hpp"
+#include "KmtFuncCompleterModel.hpp"
 #include <QFrame>
 #include <QBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPlainTextEdit>
+#include <QStringListModel>
 
 #include <kmt/AbstractTable.hpp>
 
@@ -44,16 +47,18 @@ signals:
     void popupHidden();
     void textShouldBeSaved(const QString &text);
 private:
+    void setCompleter();
+private:
     const km::AbstractTable *m_table;
     QTimer *m_timer;
-    QPlainTextEdit *m_editor;
+    CustomTextEdit *m_editor;
     QLabel *m_error;
     QVBoxLayout *m_main_layout;
     km::parse::TokenContainer m_container;
+    KmtFuncCompleterModel *m_completer_model;
     int m_line;
     km::DataType m_tgt_type;
     bool m_ok;
-
 };
 
 inline QString KmtFuncPopupEditor::getExpr() const

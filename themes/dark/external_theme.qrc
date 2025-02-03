@@ -184,5 +184,13 @@
         <file>icons/maroon/slider_handle.png</file>
         <file>icons/maroon/slider_handle_disabled.png</file>
         <file>icons/maroon/slider_handle_hover.png</file>
+        <file>icons/blue/c-solid.png</file>
+        <file>icons/blue/florin-sign-solid.png</file>
+        <file>icons/green/c-solid.png</file>
+        <file>icons/green/florin-sign-solid.png</file>
+        <file>icons/maroon/c-solid.png</file>
+        <file>icons/maroon/florin-sign-solid.png</file>
+        <file>icons/purple/c-solid.png</file>
+        <file>icons/purple/florin-sign-solid.png</file>
     </qresource>
 </RCC>
